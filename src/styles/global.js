@@ -53,8 +53,38 @@ body {
     font-family: var(--font);
   }
 
+main {
+  padding-left: var(--spacing-m);
+  padding-right: var(--spacing-m);
+}
+
 a {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.shape-to-right {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  object-position: 50% 50%;
+
+}
+
+.shape-to-left {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 `
 

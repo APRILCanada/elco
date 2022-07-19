@@ -17,13 +17,6 @@ module.exports = {
         "path":  `${__dirname}/src/assets`
       },
       __key: "assets"
-    }, {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "content",
-        "path": `${__dirname}/content`
-      },
-      __key: "content"
     },
     {
       resolve: `gatsby-theme-i18n`,

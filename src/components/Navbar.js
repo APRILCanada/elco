@@ -11,6 +11,7 @@ const Navbar = () => (
             alt='Elco logo'
             height={50}
             placeholder='tracedSVG'
+            layout='fixed'
         />
         <Menu>
             <MenuLink to=''>solutions</MenuLink>
@@ -30,7 +31,7 @@ const Header = styled.header`
     align-items: center;
     height: 60px;
     width: 100%;
-    box-shadow: 0 2px 14 px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 14 px rgba(0, 0, 0, 0.1);
     padding: 0 var(--spacing-s);
 `
 
