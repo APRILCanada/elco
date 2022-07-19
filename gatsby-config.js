@@ -3,19 +3,34 @@ module.exports = {
     title: `Elco`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+  plugins: [
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "assets",
+        "path":  `${__dirname}/src/assets`
+      },
+      __key: "assets"
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "content",
+        "path": `${__dirname}/content`
+      },
+      __key: "content"
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    {
+      resolve: `gatsby-theme-i18n`,
+      options: {
+        defaultLang: `fr`,
+        configPath: require.resolve(`./i18n/config.json`),
+      },
     },
-    __key: "pages"
-  }]
+  ]
 };
