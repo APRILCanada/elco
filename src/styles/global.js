@@ -40,6 +40,15 @@ const GlobalStyle = createGlobalStyle`
   }
 }
 
+/* RYTHME VERTICAL */
+header + main {
+  margin-top: var(--spacing-l);
+}
+button + button {
+  margin-top: var(--spacing-m);
+}
+
+
 *,
 *::before,
 *::after {
