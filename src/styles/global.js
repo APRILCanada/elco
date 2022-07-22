@@ -20,30 +20,8 @@ const GlobalStyle = createGlobalStyle`
         --spacing-m: 1.5rem;
         --spacing-l: 3rem;
 
-// Adaptation de la police
-  @media (min-width: 500px) {
-    :root {
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (min-width: 800px) {
-    :root {
-      font-size: 1.1rem;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    :root {
-      font-size: 1.2rem;
-    }
-  }
-}
 
 /* RYTHME VERTICAL */
-header + main {
-  margin-top: var(--spacing-l);
-}
 button + button {
   margin-top: var(--spacing-m);
 }
@@ -58,19 +36,76 @@ button + button {
 body {
     margin: 0;
     padding: 0;
-    line-height: 1.5;
+    line-height: 1.4;
     font-family: var(--font);
   }
-
-main {
-  padding-left: var(--spacing-m);
-  padding-right: var(--spacing-m);
-}
 
 h1, h2, h3 {
   color: var(--color-heading);
   font-weight: 400;
   font-size: 20px;
+}
+
+// Adaptation de la police
+@media (min-width: 500px) {
+    :root {
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (min-width: 750px) {
+    :root {
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 980px) {
+    :root {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+  }
+
+
+  @media (min-width: 1180px) {
+    :root {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 1380px) {
+    :root {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    :root {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 a {
