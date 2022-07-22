@@ -58,6 +58,12 @@ main {
   padding-right: var(--spacing-m);
 }
 
+h1, h2, h3 {
+  color: var(--color-heading);
+  font-weight: 400;
+  font-size: 20px;
+}
+
 a {
   text-decoration: none;
 }
