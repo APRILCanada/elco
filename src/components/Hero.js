@@ -14,7 +14,11 @@ const Hero = () => (
             className='shape-to-right'
         />
         <Cta>
-            <MainTitle>ELCO - Découvrez des solutions d'assurance spécialisées conçues pour vous.</MainTitle>
+            <MainTitle>
+                <span className="highlight-primary">ELCO</span>
+                - Découvrez des solutions d'assurance spécialisées
+                <span className="highlight">conçues pour vous.</span>
+            </MainTitle>
             <Buttons>
                 <ActionButton>Contactez-nous!</ActionButton>
                 <ActionButton outlined>
@@ -24,7 +28,7 @@ const Hero = () => (
                         height={20}
                         alt='Call Elco'
                         placeholder='blurred'
-                        style={{ marginRight: "var(--spacing-s)"}}
+                        style={{ marginRight: "var(--spacing-s)" }}
                     />
                     <span>1 800-993-7070</span>
                 </ActionButton>

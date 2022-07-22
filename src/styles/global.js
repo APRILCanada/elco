@@ -101,6 +101,16 @@ form {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
+
+.highlight {
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.highlight-primary {
+  font-weight: 800;
+  color: var(--color-primary);
+}
 `
 
 export default GlobalStyle;
