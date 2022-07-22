@@ -19,6 +19,6 @@ export default Layout
 const Main = styled.main`
   padding-left: var(--spacing-m);
   padding-right: var(--spacing-m);
-  max-width: 1380px;
+  max-width: var(--max-width);
   margin: var(--spacing-l) auto;
 `

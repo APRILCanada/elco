@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { ActionButton } from './Buttons'
 import media from '../styles/breakpoints'
 
+
 const Hero = () => (
     <Section>
         <StaticImage

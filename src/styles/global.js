@@ -4,7 +4,7 @@ import '@fontsource/poppins';
 const GlobalStyle = createGlobalStyle`
     :root {
         box-sizing: border-box;
-        font-size: 0.75rem;
+        font-size: 0.9rem;
         --color-primary: #2188E4;
         --color-secondary: #F7AA36;
         
@@ -20,12 +20,18 @@ const GlobalStyle = createGlobalStyle`
         --spacing-m: 1.5rem;
         --spacing-l: 3rem;
 
+        --max-width: 1380px;
+
 
 /* RYTHME VERTICAL */
+section + section,
 button + button {
   margin-top: var(--spacing-m);
 }
 
+section {
+  padding: var(--spacing-l) 0;
+}
 
 *,
 *::before,
@@ -146,6 +152,15 @@ form {
   font-weight: 800;
   color: var(--color-primary);
 }
+
+.float {
+     border-radius: 50%;
+      float: left;
+      margin-right: 1.5rem;
+      margin-bottom: 1.5rem;
+      min-width: 85px;
+      shape-outside: circle();
+    }
 `
 
 export default GlobalStyle;
