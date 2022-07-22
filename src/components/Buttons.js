@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import media from '../styles/breakpoints'
 
 export const ActionButton = styled.button`
   background-color: ${({ outlined }) => outlined ? "var(--color-white)" : "var(--color-secondary)"};
   border: 1px solid var(--color-secondary);
-  color: ${({ outlined}) => outlined ? "var(--color-secondary)" : "var(--color-white)"};
+  color: ${({ outlined }) => outlined ? "var(--color-secondary)" : "var(--color-white)"};
   font-family: var(--font);
   font-size: 1.2rem;
   font-weight: bold;
@@ -17,8 +16,5 @@ export const ActionButton = styled.button`
   cursor: pointer;
   min-width: 200px;
   min-height: 40px;
-
-  /* ${media.s`
-    font-size: 1.5rem;
-  `} */
+  box-shadow: ${({ outlined }) => outlined ? "none" : "0px 4px 12px rgba(0, 0, 0, 0.3)"};
 `

@@ -16,8 +16,18 @@ const Hero = () => (
         <Cta>
             <MainTitle>ELCO - Découvrez des solutions d'assurance spécialisées conçues pour vous.</MainTitle>
             <Buttons>
-                <ActionButton>Contactez-nous</ActionButton>
-                <ActionButton outlined>1 800-993-7070</ActionButton>
+                <ActionButton>Contactez-nous!</ActionButton>
+                <ActionButton outlined>
+                    <StaticImage
+                        src='../assets/icons/phone.png'
+                        width={20}
+                        height={20}
+                        alt='Call Elco'
+                        placeholder='blurred'
+                        style={{ marginRight: "var(--spacing-s)"}}
+                    />
+                    <span>1 800-993-7070</span>
+                </ActionButton>
             </Buttons>
         </Cta>
     </Section>
