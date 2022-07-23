@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import '@fontsource/poppins';
 
 const GlobalStyle = createGlobalStyle`
@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
         --spacing-s: 0.5rem;
         --spacing-m: 1.5rem;
         --spacing-l: 3rem;
+        --spacing-xl: 5rem;
 
         --max-width: 1380px;
 
@@ -58,7 +59,7 @@ h1, h2, h3 {
       font-size: 0.9rem;
     }
 
-    h1 {
+    h1, h2 {
       font-size: 1.6rem;
     }
   }
@@ -153,14 +154,16 @@ form {
   color: var(--color-primary);
 }
 
-.float {
+@media (max-width: 580px) {
+  .float {
      border-radius: 50%;
       float: left;
-      margin-right: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-right: var(--spacing-l);
+      margin-bottom: var(--spacing-l);
       min-width: 85px;
       shape-outside: circle();
     }
-`
+}
+`;
 
 export default GlobalStyle;
