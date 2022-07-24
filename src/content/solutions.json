@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Bateau",
+    "img": "../assets/icons/boat.png"
+  },
+  {
+    "title": "Entrepreneurs en construction",
+    "img": "../assets/icons/contractor.png"
+  },
+  {
+    "title": "Marine commerciale",
+    "img": "../assets/icons/marine.png"
+  },
+  {
+    "title": "Automobile hors-normes",
+    "img": "../assets/icons/auto.png"
+  },
+  {
+    "title": "Résidentiel hors-normes",
+    "img": "../assets/icons/boat.png"
+  }
+]

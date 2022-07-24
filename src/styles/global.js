@@ -59,8 +59,12 @@ h1, h2, h3 {
       font-size: 0.9rem;
     }
 
-    h1, h2 {
+    h1 {
       font-size: 1.6rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
     }
   }
 
