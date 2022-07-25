@@ -17,5 +17,5 @@ export const ActionButton = styled.button`
   width: fit-content;
   min-width: 200px;
   min-height: 40px;
-  box-shadow: ${({ outlined }) => outlined ? "none" : "0px 4px 12px rgba(0, 0, 0, 0.3)"};
+  box-shadow: ${({ outlined }) => outlined ? "none" : "var(--box-shadow)"};
 `

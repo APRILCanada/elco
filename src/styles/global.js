@@ -22,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
         --spacing-l: 3rem;
         --spacing-xl: 5rem;
 
+        --box-shadow-btn: 0px 4px 12px rgba(0, 0, 0, 0.3);
+
         --max-width: 1380px;
 
 
