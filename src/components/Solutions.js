@@ -28,7 +28,7 @@ const Solutions = () => {
 
   return (
     <Section>
-      <SectionHeading>Nos solutions</SectionHeading>
+      <SectionHeading id="solutions">Nos solutions</SectionHeading>
       <Grid>
         {solutions.map(({ node: solution }) => (
           <Card key={solution.id} {...solution} />
@@ -36,7 +36,6 @@ const Solutions = () => {
         <CtaQuestions>
           <span>Des questions</span>
           <QuestionIcon />
-
         </CtaQuestions>
       </Grid>
     </Section>

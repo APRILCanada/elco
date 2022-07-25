@@ -28,7 +28,7 @@ const Team = () => {
   return (
     <Section>
       <Wrapper>
-        <SectionHeading>Découvrez notre équipe</SectionHeading>
+        <SectionHeading id="team">Découvrez notre équipe</SectionHeading>
         <Grid>
           {team.map(({ node: teammate }) => (
             <Card key={teammate.id} {...teammate} direction="right" />
@@ -54,7 +54,7 @@ const Wrapper = styled.div`
     max-width: var(--max-content);
     margin-left: auto;
     margin-right: auto;
-    padding: 0 2.1rem; // temporary weird padding bug
+    //padding: 0 2.1rem; // temporary weird padding bug
 `
 
 const Grid = styled.div`

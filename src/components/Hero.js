@@ -9,8 +9,8 @@ const Hero = () => (
     <Section>
         <StaticImage
             src='../assets/images/hero.jpg'
-            width={450}
-            height={450}
+            width={500}
+            height={500}
             alt='Contact Elco'
             placeholder='blurred'
             className='shape-to-right'
@@ -72,7 +72,7 @@ const Cta = styled.div`
 
 const MainTitle = styled.h1`
     text-align: right;
-    max-width: 450px;
+    max-width: 500px;
 
     ${media.s`
         text-align: left;

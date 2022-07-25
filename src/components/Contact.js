@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading'
 
 const Contact = () => (
     <Section>
-        <SectionHeading>Contactez-nous!</SectionHeading>
+        <SectionHeading id="contact">Contactez-nous!</SectionHeading>
         <ContactForm />
     </Section>
 )

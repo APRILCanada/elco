@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
 const Navbar = () => (
@@ -15,9 +15,9 @@ const Navbar = () => (
             imgStyle={{objectPosition: 'bottom'}}
         />
         <Menu>
-            <MenuLink to=''>solutions</MenuLink>
-            <MenuLink to=''>l'équipe</MenuLink>
-            <MenuLink to=''>contact</MenuLink>
+            <MenuLink to='#solutions' stripHash title='Solutions' />
+            <MenuLink to='/#team' stripHash  title="L'équipe" />
+            <MenuLink to='/#contact' stripHash title="Contact" />
         </Menu>
     </Header>
 )
@@ -42,7 +42,7 @@ const Menu = styled.nav`
     align-items: center;
 `
 
-const MenuLink = styled(Link)`
+const MenuLink = styled(AnchorLink)`
     color: var(--color-heading);
     text-transform: uppercase;
     margin-left: var(--spacing-m);
