@@ -4,14 +4,16 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Card from './Card';
 
 const Team = () => {
-    const {
-        allTeamJson: { edges: team }
-    } = useStaticQuery(graphql`
+  const {
+    allTeamJson: { edges: team }
+  } = useStaticQuery(graphql`
         {
           allTeamJson {
             edges {
               node {
+                id
                 title
+                desc
                 img {
                   childImageSharp {
                     gatsbyImageData(width: 130, placeholder: TRACED_SVG, layout: FIXED)
@@ -22,17 +24,17 @@ const Team = () => {
           }
         }
       `);
-    return (
-        <Section>
-            <Wrapper>
-                <Grid>
-                    {team.map(({ node: teammate }) => (
-                        <Card key={teammate.id} {...teammate} />
-                    ))}
-                </Grid>
-            </Wrapper>
-        </Section>
-    );
+  return (
+    <Section>
+      <Wrapper>
+        <Grid>
+          {team.map(({ node: teammate }) => (
+            <Card key={teammate.id} {...teammate} direction="right" />
+          ))}
+        </Grid>
+      </Wrapper>
+    </Section>
+  );
 }
 
 export default Team

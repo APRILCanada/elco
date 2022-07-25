@@ -1,37 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const Card = ({ title, img, desc }) => {
+const Card = ({ title, img, desc, direction = "left" }) => {
   const image = getImage(img);
-
+  console.log("desc", desc)
   return (
     <article>
-      <Shape>
+      <Shape direction={direction}>
         <GatsbyImage image={image} alt={title} />
       </Shape>
-      <Name>{title}</Name>
+      <Name direction={direction}>{title}</Name>
+      <Description direction={direction}>{desc}</Description>
     </article>
   );
 };
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  //img: PropTypes.string.isRequired,
+  img: PropTypes.object.isRequired,
   desc: PropTypes.string,
   direction: PropTypes.string
 };
 
 export default Card;
-
-const Name = styled.h2`
-  text-align: left;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: var(--spacing-s);
-  line-height: 1.2;
-`;
 
 const Shape = styled.div`
   background-color: var(--color-grey-light);
@@ -43,4 +36,23 @@ const Shape = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ direction }) =>
+    direction === "right" &&
+    css`
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 50%;
+    `}
 `;
+
+const Name = styled.h2`
+  text-align: ${({ direction }) => direction};
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: var(--spacing-s);
+  line-height: 1.2;
+`;
+
+const Description = styled.p`
+  text-align: ${({ direction }) => direction};
+  line-height: 1.2;
+`

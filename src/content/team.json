@@ -1,23 +1,28 @@
 [
     {
       "title": "Annie Bernier",
-      "img": "../assets/icons/boat.png"
+      "img": "../assets/icons/boat.png",
+      "desc": "Directice distribution directe Courtier en assurance de dommages"
     },
     {
       "title": "Pierre Gagné",
-      "img": "../assets/icons/contractor.png"
+      "img": "../assets/icons/contractor.png",
+      "desc": "Chef d'équipe & Courtier en assurance de dommages"
     },
     {
       "title": "Véronique Lamarre",
-      "img": "../assets/icons/marine.png"
+      "img": "../assets/icons/marine.png",
+      "desc": "Courtier en assurance de dommages"
     },
     {
       "title": "Alain El Khanssa",
-      "img": "../assets/icons/auto.png"
+      "img": "../assets/icons/auto.png",
+      "desc": "Courtier en assurance de dommages"
     },
     {
       "title": "Jade Paradis-parent",
-      "img": "../assets/icons/boat.png"
+      "img": "../assets/icons/boat.png",
+      "desc": "Assistante"
     }
   ]
   
