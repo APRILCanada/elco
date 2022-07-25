@@ -28,7 +28,7 @@ const Team = () => {
   return (
     <Section>
       <Wrapper>
-      <SectionHeading>Découvrez notre équipe</SectionHeading>
+        <SectionHeading>Découvrez notre équipe</SectionHeading>
         <Grid>
           {team.map(({ node: teammate }) => (
             <Card key={teammate.id} {...teammate} direction="right" />
@@ -41,7 +41,7 @@ const Team = () => {
 
 export default Team
 
-
+// CSS
 const Section = styled.section`
   /* make the section full-bleed despite the <main> width being 1380px */
   width: 100vw;
@@ -54,6 +54,7 @@ const Wrapper = styled.div`
     max-width: var(--max-content);
     margin-left: auto;
     margin-right: auto;
+    padding: 0 2.1rem; // temporary weird padding bug
 `
 
 const Grid = styled.div`

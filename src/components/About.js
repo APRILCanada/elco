@@ -34,7 +34,7 @@ const Section = styled.section`
 
 /* constrains the content of the section */
 const Wrapper = styled.div`
-  max-width: 980px;
+  max-width: var(--max-content);
   margin-left: auto;
   margin-right: auto;
   display: flex;

@@ -47,6 +47,7 @@ const Solutions = () => {
 
 export default Solutions;
 
+// CSS
 const Section = styled.section`
   max-width: var(--max-content);
   margin: 0 auto;
@@ -61,7 +62,7 @@ const Grid = styled.div`
 `;
 
 const CtaQuestions = styled.div`
-   width: 275px;
+  width: 275px;
   height: 275px;
   border-radius: 50%;
   padding: var(--spacing-m);
