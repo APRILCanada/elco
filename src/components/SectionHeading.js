@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types';
 import ShapeIcon from '../assets/icons/shape';
 
-const SectionHeading = ({ children }) => {
-    return (
-        <Heading>
-            <ShapeIcon />
-            {children}
-        </Heading>
-    )
-}
+const SectionHeading = ({ children }) => (
+    <Heading>
+        <ShapeIcon />
+        {children}
+    </Heading>
+)
 
 export default SectionHeading
 

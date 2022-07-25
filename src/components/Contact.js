@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import ContactForm from './ContactForm'
 import SectionHeading from './SectionHeading'
 
-const Contact = () => {
-    return (
-        <Section>
-            <SectionHeading>Contactez-nous!</SectionHeading>
-            <ContactForm />
-        </Section>
-    )
-}
+const Contact = () => (
+    <Section>
+        <SectionHeading>Contactez-nous!</SectionHeading>
+        <ContactForm />
+    </Section>
+)
 
 export default Contact
 

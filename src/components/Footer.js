@@ -5,43 +5,41 @@ import media from '../styles/breakpoints'
 import FacebookIcon from '../assets/icons/facebook'
 import LinkedinIcon from '../assets/icons/linkedin'
 
-const Footer = () => {
-    return (
-        <Wrapper>
-            <Logo>
-                <StaticImage
-                    src='../assets/images/logo-elco-social.jpg'
-                    alt='Elco logo'
-                    width={65}
-                    height={65}
-                    placeholder='tracedSVG'
-                    layout='fixed'
-                    imgStyle={{ borderRadius: "50%" }}
-                />
-            </Logo>
-            <Address>
-                <b>Elco Assurances</b><br />
-                3250 boul. Lapinière, suite 105<br />
-                Brossard, Québec J4Z 3T8<br />
-                +1 800-993-7070
-            </Address>
-            <OpeningHours>
-                Nos bureaux sont ouverts du lundi
-                au vendredi de 8h30 à 17h.
-            </OpeningHours>
-            <Socials>
-                <a href="https://www.facebook.com/ElcoAssurances/" target="_blank" aria-label="Lien vers la page facebook d'Elco">
-                    <FacebookIcon />
-                </a>
+const Footer = () => (
+    <Wrapper>
+        <Logo>
+            <StaticImage
+                src='../assets/images/logo-elco-social.jpg'
+                alt='Elco logo'
+                width={65}
+                height={65}
+                placeholder='tracedSVG'
+                layout='fixed'
+                imgStyle={{ borderRadius: "50%" }}
+            />
+        </Logo>
+        <Address>
+            <b>Elco Assurances</b><br />
+            3250 boul. Lapinière, suite 105<br />
+            Brossard, Québec J4Z 3T8<br />
+            +1 800-993-7070
+        </Address>
+        <OpeningHours>
+            Nos bureaux sont ouverts du lundi
+            au vendredi de 8h30 à 17h.
+        </OpeningHours>
+        <Socials>
+            <a href="https://www.facebook.com/ElcoAssurances/" target="_blank" aria-label="Lien vers la page facebook d'Elco">
+                <FacebookIcon />
+            </a>
 
-                <a href="https://www.linkedin.com/company/elco-assurances-inc/?originalSubdomain=ca" target="_blank" aria-label="Lien vers la page linkedin d'Elco">
-                    <LinkedinIcon />
-                </a>
+            <a href="https://www.linkedin.com/company/elco-assurances-inc/?originalSubdomain=ca" target="_blank" aria-label="Lien vers la page linkedin d'Elco">
+                <LinkedinIcon />
+            </a>
 
-            </Socials>
-        </Wrapper>
-    )
-}
+        </Socials>
+    </Wrapper>
+)
 
 export default Footer
 

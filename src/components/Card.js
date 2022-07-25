@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Card = ({ title, img, desc, direction = "left" }) => {
   const image = getImage(img);
-  console.log("desc", desc)
+  
   return (
     <article>
       <Shape direction={direction}>
