@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Link } from 'gatsby';
 import Card from './Card';
 
 const Solutions = () => {
@@ -46,7 +45,7 @@ const Solutions = () => {
 export default Solutions;
 
 const Section = styled.section`
-  max-width: 980px;
+  max-width: var(--max-content);
   margin: 0 auto;
 `;
 

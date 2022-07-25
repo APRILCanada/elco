@@ -1,11 +1,23 @@
 [
     {
-        "name": "Paul"
+      "title": "Annie Bernier",
+      "img": "../assets/icons/boat.png"
     },
     {
-        "name": "Jessy"
+      "title": "Pierre Gagné",
+      "img": "../assets/icons/contractor.png"
     },
     {
-        "name": "Bob"
+      "title": "Véronique Lamarre",
+      "img": "../assets/icons/marine.png"
+    },
+    {
+      "title": "Alain El Khanssa",
+      "img": "../assets/icons/auto.png"
+    },
+    {
+      "title": "Jade Paradis-parent",
+      "img": "../assets/icons/boat.png"
     }
-]
+  ]
+  

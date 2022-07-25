@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         --box-shadow-btn: 0px 4px 12px rgba(0, 0, 0, 0.3);
 
         --max-width: 1380px;
+        --max-content: 980px;
 
 
 /* RYTHME VERTICAL */
