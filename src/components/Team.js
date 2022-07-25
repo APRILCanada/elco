@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Card from './Card';
+import SectionHeading from './SectionHeading';
 
 const Team = () => {
   const {
@@ -27,6 +28,7 @@ const Team = () => {
   return (
     <Section>
       <Wrapper>
+      <SectionHeading>Découvrez notre équipe</SectionHeading>
         <Grid>
           {team.map(({ node: teammate }) => (
             <Card key={teammate.id} {...teammate} direction="right" />

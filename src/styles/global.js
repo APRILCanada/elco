@@ -66,10 +66,12 @@ h1, h2, h3 {
 
     h1 {
       font-size: 1.6rem;
+      font-weight: bold;
     }
 
     h2 {
       font-size: 1.25rem;
+      font-weight: bold;
     }
   }
 

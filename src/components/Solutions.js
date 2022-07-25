@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Card from './Card';
+import SectionHeading from './SectionHeading';
 
 const Solutions = () => {
   const {
@@ -26,6 +27,7 @@ const Solutions = () => {
 
   return (
     <Section>
+      <SectionHeading>Nos solutions</SectionHeading>
       <Grid>
         {solutions.map(({ node: solution }) => (
           <Card key={solution.id} {...solution} />
