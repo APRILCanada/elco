@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import GlobalStyle from '../styles/global'
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 
 const Layout = ({ children }) => (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => (
         <Main>
             {children}
         </Main>
+        <Footer />
     </>
 )
 

@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 0.9rem;
         --color-primary: #2188E4;
         --color-secondary: #F7AA36;
+        --color-tertiary: #013D62;
         
         --color-grey-light: #F1F1F1;
         --color-white: #FFFFFF;
