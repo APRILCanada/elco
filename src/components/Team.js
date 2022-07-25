@@ -54,7 +54,6 @@ const Wrapper = styled.div`
     margin-right: auto;
 `
 
-
 const Grid = styled.div`
   width: 100%;
   display: grid;

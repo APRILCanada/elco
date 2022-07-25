@@ -26,6 +26,7 @@ Card.propTypes = {
 
 export default Card;
 
+// CSS
 const Shape = styled.div`
   background-color: var(--color-grey-light);
   width: 275px;

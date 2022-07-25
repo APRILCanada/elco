@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import Solutions from "../components/Solutions"
 import Team from "../components/Team"
 import { useLocalization } from "gatsby-theme-i18n"
+import Contact from "../components/Contact"
 
 
 const IndexPage = ({ data }) => {
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => {
       <About />
       <Solutions />
       <Team />
+      <Contact />
     </>
   )
 }

@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         --color-primary: #2188E4;
         --color-secondary: #F7AA36;
         --color-tertiary: #013D62;
+        --color-error: #cc0000;
         
         --color-grey-light: #F1F1F1;
         --color-white: #FFFFFF;
@@ -131,11 +132,6 @@ img {
   display: block;
   max-width: 100%;
   object-fit: cover;
-}
-
-form {
-  width: 100%;
-  max-width: 600px;
 }
 
 .shape-to-right {
