@@ -11,7 +11,7 @@ const SectionHeading = ({ children, id }) => (
 )
 
 
-Heading.propTypes = {
+SectionHeading.propTypes = {
     children: PropTypes.node.isRequired,
     id: PropTypes.string.isRequired
 };
