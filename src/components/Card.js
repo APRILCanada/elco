@@ -31,6 +31,7 @@ const Shape = styled.div`
   background-color: var(--color-grey-light);
   width: 275px;
   height: 275px;
+  overflow: hidden;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
