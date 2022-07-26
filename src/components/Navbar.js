@@ -7,12 +7,12 @@ import Hamburger from './Hamburger';
 import { motion, useCycle } from 'framer-motion'
 
 const sidebar = {
-    open: (height = 1000) => ({
+    open: (height = 150) => ({
         clipPath: `circle(${height * 2 + 200}px at 100% 30px)`,
         transition: {
             type: "spring",
-            stiffness: 20,
-            restDelta: 2
+            stiffness: 90,
+            restDelta: 2,
         }
     }),
     closed: {
@@ -99,7 +99,7 @@ const SideNav = styled(motion.div)`
   top: 0;
   right: 0;
   bottom: 0;
-  width: 80vw;
+  width: 100vw;
   background: var(--color-tertiary);
   z-index: 11;
 `
