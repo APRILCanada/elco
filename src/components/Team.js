@@ -17,7 +17,7 @@ const Team = () => {
                 desc
                 img {
                   childImageSharp {
-                    gatsbyImageData(width: 275, placeholder: TRACED_SVG, layout: FIXED)
+                    gatsbyImageData(width: 275, placeholder: BLURRED, layout: FIXED)
                   }
                 }
               }

@@ -15,9 +15,9 @@ const Navbar = () => (
             imgStyle={{objectPosition: 'bottom'}}
         />
         <Menu>
-            <MenuLink to='#solutions' stripHash title='Solutions' />
-            <MenuLink to='/#team' stripHash  title="L'équipe" />
-            <MenuLink to='/#contact' stripHash title="Contact" />
+            <MenuLink to='/#solutions'>Solutions</MenuLink>
+            <MenuLink to='/#team'>L'équipe</MenuLink>
+            <MenuLink to='/#contact'>Contact</MenuLink>
         </Menu>
     </Header>
 )

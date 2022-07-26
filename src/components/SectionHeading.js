@@ -3,14 +3,21 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types';
 import ShapeIcon from '../assets/icons/shape';
 
-const SectionHeading = ({ children }) => (
-    <Heading>
+const SectionHeading = ({ children, id }) => (
+    <Heading id={id}>
         <ShapeIcon />
         {children}
     </Heading>
 )
 
+
+Heading.propTypes = {
+    children: PropTypes.node.isRequired,
+    id: PropTypes.string.isRequired
+};
+
 export default SectionHeading
+
 
 // CSS
 const Heading = styled.h2`
@@ -23,7 +30,3 @@ const Heading = styled.h2`
     margin-right: var(--spacing-s);
 }
 `
-
-Heading.propTypes = {
-    children: PropTypes.node.isRequired
-};
