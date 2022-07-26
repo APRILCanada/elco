@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 import { ActionButton } from './Buttons'
 import media from '../styles/breakpoints'
+import { motion } from 'framer-motion'
 
 
 const Hero = () => (
@@ -16,7 +17,7 @@ const Hero = () => (
             className='shape-to-right'
         />
         <Cta>
-            <MainTitle>
+            <MainTitle initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.5 }}>
                 <span className="highlight-primary">ELCO </span>
                 - Découvrez des solutions d'assurance spécialisées<br />
                 <span className="highlight"> conçues pour vous.</span>
@@ -70,7 +71,7 @@ const Cta = styled.div`
   `}
 `
 
-const MainTitle = styled.h1`
+const MainTitle = styled(motion.h1)`
     text-align: right;
     max-width: 500px;
 
