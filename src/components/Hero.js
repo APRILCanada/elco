@@ -4,41 +4,44 @@ import { StaticImage } from "gatsby-plugin-image"
 import { ActionButton } from './Buttons'
 import media from '../styles/breakpoints'
 import { motion } from 'framer-motion'
+import { Trans } from 'gatsby-plugin-react-i18next'
 
 
-const Hero = () => (
-    <Section>
-        <StaticImage
-            src='../assets/images/hero.jpg'
-            width={500}
-            height={500}
-            alt='Contact Elco'
-            placeholder='blurred'
-            className='shape-to-right'
-        />
-        <Cta>
-            <MainTitle initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.5 }}>
-                <span className="highlight-primary">ELCO </span>
-                - Découvrez des solutions d'assurance spécialisées<br />
-                <span className="highlight"> conçues pour vous.</span>
-            </MainTitle>
-            <Buttons>
-                <ActionButton>Contactez-nous!</ActionButton>
-                <ActionButton outlined>
-                    <StaticImage
-                        src='../assets/icons/phone.png'
-                        width={20}
-                        height={20}
-                        alt='Call Elco'
-                        placeholder='blurred'
-                        style={{ marginRight: "var(--spacing-s)" }}
-                    />
-                    <span>1 800-993-7070</span>
-                </ActionButton>
-            </Buttons>
-        </Cta>
-    </Section>
-)
+const Hero = () => {
+    return (
+        <Section>
+            <StaticImage
+                src='../assets/images/hero.jpg'
+                width={500}
+                height={500}
+                alt='Contact Elco'
+                placeholder='blurred'
+                className='shape-to-right'
+            />
+            <Cta>
+                <MainTitle initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.5 }}>
+                    <span className="highlight-primary">ELCO </span>
+                    - <Trans>Discover specialized insurance solutions</Trans><br />
+                    <span className="highlight"> <Trans>conçues pour vous</Trans>.</span>
+                </MainTitle>
+                <Buttons>
+                    <ActionButton><Trans>Contact us</Trans></ActionButton>
+                    <ActionButton outlined>
+                        <StaticImage
+                            src='../assets/icons/phone.png'
+                            width={20}
+                            height={20}
+                            alt='Call Elco'
+                            placeholder='blurred'
+                            style={{ marginRight: "var(--spacing-s)" }}
+                        />
+                        <span>1 800-993-7070</span>
+                    </ActionButton>
+                </Buttons>
+            </Cta>
+        </Section>
+    )
+}
 
 export default Hero
 

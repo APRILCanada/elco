@@ -2,28 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import media from '../styles/breakpoints';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Trans, useTranslation } from 'react-i18next';
 
-const About = () => (
-  <Section>
-    <Wrapper>
-      <ColImg>
-        <StaticImage src='../assets/icons/lightbulb.png' alt='About' width={185} height={185} placeholder='tracedSVG' loading='lazy' />
-      </ColImg>
+const About = () => {
+  const { t } = useTranslation()
 
-      <ColText>
-        <Heading>
-          Depuis 1992, ELCO s'efforce d'accompagner ses clients dans leur recherche de
-          <span className='highlight'> solutions d'assurances spécialisées.</span>
-        </Heading>
-        <Paragraph>Au sein de notre cabinet, nos courtiers experts de leur domaine s'impliquent au quotidien pour offrir à nos clients et futurs assurés une expérience de l'assurance remarquable et une expertise fine sur nos marchés.</Paragraph>
-        <Paragraph>Avec pour ambition de devenir le chef de file de l'assurance bateau et entrepreneurs en construction, découvrez comment ELCO vous accompagne au quotidien.</Paragraph>
-      </ColText>
-    </Wrapper>
-  </Section>
-);
+  return (
+    <Section>
+      <Wrapper>
+        <ColImg>
+          <StaticImage src='../assets/icons/lightbulb.png' alt='About' width={185} height={185} placeholder='tracedSVG' loading='lazy' />
+        </ColImg>
+
+        <ColText>
+          <Heading>
+            <Trans>Since 1992, ELCO has been striving to assist its clients in their search for</Trans>
+            <span className='highlight'> <Trans>specialized insurance solutions.</Trans></span>
+          </Heading>
+          <Paragraph>{t('expertise')}</Paragraph>
+          <Paragraph>{t('ambition')}</Paragraph>
+        </ColText>
+      </Wrapper>
+    </Section>
+  )
+}
 
 export default About;
 
+
+// CSS
 const Section = styled.section`
   /* make the section full-bleed despite the <main> width being 1380px */
   width: 100vw;

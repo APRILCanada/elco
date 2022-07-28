@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import media from '../styles/breakpoints';
 import Hamburger from './Hamburger';
 import { motion, useCycle } from 'framer-motion'
+import { Trans, useI18next, Link } from 'gatsby-plugin-react-i18next'
 
 const sidebar = {
     open: (height = 150) => ({
@@ -26,6 +27,7 @@ const sidebar = {
 };
 
 const Navbar = () => {
+    const { languages, originalPath } = useI18next()
     const [isOpen, toggleOpen] = useCycle(false, true);
 
     return (
@@ -40,14 +42,25 @@ const Navbar = () => {
             />
             <SideNav initial={false} animate={isOpen ? "open" : "closed"} variants={sidebar}>
                 <MenuMobileLink to='/#solutions'>Solutions</MenuMobileLink>
-                <MenuMobileLink to='/#team'>L'équipe</MenuMobileLink>
+                <MenuMobileLink to='/#team'><Trans>Team</Trans></MenuMobileLink>
                 <MenuMobileLink to='/#contact'>Contact</MenuMobileLink>
             </SideNav>
 
             <Menu>
                 <MenuLink to='/#solutions'>Solutions</MenuLink>
-                <MenuLink to='/#team'>L'équipe</MenuLink>
+                <MenuLink to='/#team'><Trans>Team</Trans></MenuLink>
                 <MenuLink to='/#contact'>Contact</MenuLink>
+                <Languages>
+                    {languages.map((lang) => {
+                        return (
+                            <li key={lang}>
+                                <Link to={originalPath} language={lang}>
+                                    {lang}
+                                </Link>
+                            </li>
+                        )
+                    })}
+                </Languages>
             </Menu>
 
             <MenuToggle initial={false} animate={isOpen ? "open" : "closed"}>
@@ -119,4 +132,7 @@ const MenuToggle = styled(motion.div)`
    ${media.s`
     display: none;
    `}
+`
+
+const Languages = styled.ul`
 `
