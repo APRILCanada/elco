@@ -27,7 +27,7 @@ const sidebar = {
 
 const Navbar = () => {
     const [isOpen, toggleOpen] = useCycle(false, true);
-    
+
     return (
         <Header>
             <StaticImage
@@ -39,7 +39,9 @@ const Navbar = () => {
                 imgStyle={{ objectPosition: 'bottom' }}
             />
             <SideNav initial={false} animate={isOpen ? "open" : "closed"} variants={sidebar}>
-                {/* <MenuMobileLink to='/#solutions' onClick={() => toggleOpen()}>Solutions</MenuMobileLink> */}
+                <MenuMobileLink to='/#solutions'>Solutions</MenuMobileLink>
+                <MenuMobileLink to='/#team'>L'équipe</MenuMobileLink>
+                <MenuMobileLink to='/#contact'>Contact</MenuMobileLink>
             </SideNav>
 
             <Menu>
@@ -92,6 +94,9 @@ const MenuMobileLink = styled(AnchorLink)`
     text-transform: uppercase;
     margin-left: var(--spacing-m);
     font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: var(--spacing-l);
 `
 
 const SideNav = styled(motion.div)`
@@ -102,6 +107,12 @@ const SideNav = styled(motion.div)`
   width: 100vw;
   background: var(--color-tertiary);
   z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-top: var(--spacing-xl);
+  padding-right: var(--spacing-m);
 `
 
 const MenuToggle = styled(motion.div)`
