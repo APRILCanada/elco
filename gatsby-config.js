@@ -40,13 +40,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
-        name: `locales`,
+        name: `locale`,
       },
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locales`,
+        localeJsonSourceName: `locale`,
         languages: [`fr`, `en`],
         defaultLanguage: `fr`,
         siteUrl: `https://classy-tartufo-f513aa.netlify.app`,
