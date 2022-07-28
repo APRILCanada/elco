@@ -3,14 +3,10 @@ import About from "../components/About"
 import Hero from "../components/Hero"
 import Solutions from "../components/Solutions"
 import Team from "../components/Team"
-import { useLocalization } from "gatsby-theme-i18n"
 import Contact from "../components/Contact"
 
 
-const IndexPage = ({ data }) => {
-  const { locale, defaultLang, config } = useLocalization()
-  console.log("locale", locale)
-
+const IndexPage = () => {
   return (
     <>
       <Hero />

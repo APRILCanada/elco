@@ -37,11 +37,34 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-theme-i18n`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        defaultLang: `fr`,
-        configPath: require.resolve(`./i18n/config.json`)
-      }
+        path: `${__dirname}/locales`,
+        name: `locales`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locales`,
+        languages: [`fr`, `en`],
+        defaultLanguage: `fr`,
+        siteUrl: `https://classy-tartufo-f513aa.netlify.app`,
+        redirect: false,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: '/preview',
+            languages: ['fr'],
+          },
+        ],
+      },
     }
   ]
 };
