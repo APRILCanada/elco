@@ -33,7 +33,7 @@ const Navbar = () => {
     return (
         <Header>
             <StaticImage
-                src='../assets/images/logo-elco.jpg'
+                src='../assets/images/logo-elco-en.jpg'
                 alt='Elco logo'
                 height={50}
                 placeholder='tracedSVG'

@@ -1,28 +1,57 @@
 [
-    {
-      "title": "Annie Bernier",
-      "img": "../assets/images/annie_bernier.jpg",
-      "desc": "Directice distribution directe Courtier en assurance de dommages"
+  {
+    "title": {
+      "en": "Annie Bernier",
+      "fr": "Annie Bernier"
     },
-    {
-      "title": "Pierre Gagné",
-      "img": "../assets/images/pierre_gagné.jpg",
-      "desc": "Chef d'équipe & Courtier en assurance de dommages"
-    },
-    {
-      "title": "Véronique Lamarre",
-      "img": "../assets/images/véronique_lamarre.jpg",
-      "desc": "Courtier en assurance de dommages"
-    },
-    {
-      "title": "Alain El Khanssa",
-      "img": "../assets/images/alain_el_khanssa.jpg",
-      "desc": "Courtier en assurance de dommages"
-    },
-    {
-      "title": "Jade Paradis-parent",
-      "img": "../assets/images/jade_paradis-parent.jpg",
-      "desc": "Assistante"
+    "img": "../assets/images/annie_bernier.jpg",
+    "desc": {
+      "en": "Direct Distribution Director P&C Insurance Broker",
+      "fr": "Directrice distribution directe, Courtier en assurance de dommages"
     }
-  ]
-  
+  },
+  {
+    "title": {
+      "en": "Pierre Gagné",
+      "fr": "Pierre Gagné"
+    },
+    "img": "../assets/images/pierre_gagné.jpg",
+    "desc": {
+      "en": "Team Leader, P&C Insurance Broker",
+      "fr": "Chef d'équipe & Courtier en assurance de dommages"
+    }
+  },
+  {
+    "title": {
+      "en": "Véronique Lamarre",
+      "fr": "Véronique Lamarre"
+    },
+    "img": "../assets/images/véronique_lamarre.jpg",
+    "desc": {
+      "en": "P&C Insurance Broker",
+      "fr": "Courtier en assurance de dommages"
+    }
+  },
+  {
+    "title": {
+      "en": "Alain El Khanssa",
+      "fr": "Alain El Khanssa"
+    },
+    "img": "../assets/images/alain_el_khanssa.jpg",
+    "desc": {
+      "en": "P&C Insurance Broker",
+      "fr": "Courtier en assurance de dommages"
+    }
+  },
+  {
+    "title": {
+      "en": "Jade Paradis-parent",
+      "fr": "Jade Paradis-parent"
+    },
+    "img": "../assets/images/jade_paradis-parent.jpg",
+    "desc": {
+      "en": "Assistant",
+      "fr": "Assistante"
+    }
+  }
+]

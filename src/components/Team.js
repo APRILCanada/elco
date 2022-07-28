@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Card from './Card';
 import SectionHeading from './SectionHeading';
+import { Trans } from 'react-i18next';
 
 const Team = () => {
   const {
@@ -13,8 +14,14 @@ const Team = () => {
             edges {
               node {
                 id
-                title
-                desc
+                title {
+                  en
+                  fr
+                }
+                desc {
+                  en
+                  fr
+                }
                 img {
                   childImageSharp {
                     gatsbyImageData(width: 275, placeholder: BLURRED, layout: FIXED)
@@ -28,7 +35,7 @@ const Team = () => {
   return (
     <Section>
       <Wrapper>
-        <SectionHeading id="team">Découvrez notre équipe</SectionHeading>
+        <SectionHeading id="team"><Trans>Meet the team</Trans></SectionHeading>
         <Grid>
           {team.map(({ node: teammate }) => (
             <Card key={teammate.id} {...teammate} direction="right" />

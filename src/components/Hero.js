@@ -22,7 +22,7 @@ const Hero = () => {
                 <MainTitle initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.5 }}>
                     <span className="highlight-primary">ELCO </span>
                     - <Trans>Discover specialized insurance solutions</Trans><br />
-                    <span className="highlight"> <Trans>conçues pour vous</Trans>.</span>
+                    <span className="highlight"> <Trans>designed for you</Trans>.</span>
                 </MainTitle>
                 <Buttons>
                     <ActionButton><Trans>Contact us</Trans></ActionButton>

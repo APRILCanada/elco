@@ -1,22 +1,37 @@
 [
   {
-    "title": "Bateau",
+    "title": {
+      "en": "Boat",
+      "fr": "Bateau"
+    },
     "img": "../assets/icons/boat.png"
   },
   {
-    "title": "Entrepreneurs en construction",
+    "title": {
+      "en": "Contractors",
+      "fr": "Entrepreneurs en construction"
+    },
     "img": "../assets/icons/contractor.png"
   },
   {
-    "title": "Marine commerciale",
+    "title": {
+      "en": "Commercial marine",
+      "fr": "Marine commerciale"
+    },
     "img": "../assets/icons/marine.png"
   },
   {
-    "title": "Automobile hors-normes",
+    "title": {
+      "en": "Non-standard automobile",
+      "fr": "Automobile hors-normes"
+    },
     "img": "../assets/icons/auto.png"
   },
   {
-    "title": "Résidentiel hors-normes",
+    "title": {
+      "en": "Non-standard residential",
+      "fr": "Résidentiel hors-normes"
+    },
     "img": "../assets/icons/boat.png"
   }
 ]

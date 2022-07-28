@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Card from './Card';
 import SectionHeading from './SectionHeading';
 import QuestionIcon from '../assets/icons/question';
+import { Trans } from 'react-i18next';
 
 const Solutions = () => {
   const {
@@ -14,7 +15,10 @@ const Solutions = () => {
         edges {
           node {
             id
-            title
+            title {
+              fr
+              en
+            }
             img {
               childImageSharp {
                 gatsbyImageData(width: 130, placeholder: TRACED_SVG, layout: FIXED)
@@ -28,13 +32,13 @@ const Solutions = () => {
 
   return (
     <Section>
-      <SectionHeading id="solutions">Nos solutions</SectionHeading>
+      <SectionHeading id="solutions"><Trans>Our solutions</Trans></SectionHeading>
       <Grid>
         {solutions.map(({ node: solution }) => (
           <Card key={solution.id} {...solution} />
         ))}
         <CtaQuestions>
-          <span>Des questions</span>
+          <span><Trans>Any questions</Trans></span>
           <QuestionIcon />
         </CtaQuestions>
       </Grid>

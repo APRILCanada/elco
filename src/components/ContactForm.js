@@ -1,9 +1,11 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { Trans, useTranslation } from 'react-i18next'
 import styled, { css } from 'styled-components'
 
 const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
+  const { t } = useTranslation()
 
   const handleFormSubmit = async (data, e) => {
     e.preventDefault()
@@ -14,15 +16,15 @@ const ContactForm = () => {
     <Form onSubmit={handleSubmit(handleFormSubmit)}>
       {/* Email */}
       <FormGroup>
-        <Label>Courriel:</Label>
+        <Label><Trans>Email</Trans>:</Label>
         <Input
           type='text'
           {...register('email', {
-            required: 'Votre courriel est requis',
+            required: t('emailRequired'),
             pattern: {
               value:
                 /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              message: 'Cet email est invalide'
+              message: t('emailInvalid')
             }
           })}
         />
@@ -31,11 +33,11 @@ const ContactForm = () => {
 
       {/* Phone */}
       <FormGroup>
-        <Label>Téléphone:</Label>
+        <Label><Trans>Phone</Trans>:</Label>
         <Input
           type='tel'
           {...register('phone', {
-            required: 'Votre téléphone est requis'
+            required: t('phoneRequired')
           })}
         />
         {errors.phone && <Error>{errors.phone.message}</Error>}
@@ -43,11 +45,11 @@ const ContactForm = () => {
 
       {/* Subject */}
       <FormGroup>
-        <Label>Sujet:</Label>
+        <Label><Trans>Subject</Trans>:</Label>
         <Input
           type='text'
           {...register('subject', {
-            required: 'Un sujet est requis'
+            required: t('subjectRequired')
           })}
         />
         {errors.subject && <Error>{errors.subject.message}</Error>}
@@ -58,7 +60,7 @@ const ContactForm = () => {
         <Label>Message:</Label>
         <Textarea
           {...register('message', {
-            required: 'Vous devez saisir un message',
+            required: t('messageRequired')
           })}
           rows="10"
         ></Textarea>
@@ -66,11 +68,11 @@ const ContactForm = () => {
       </FormGroup>
 
       <Button type="submit">
-        Soumettre
+        <Trans>Submit</Trans>
       </Button>
 
       <Disclaimer>
-        * En soumettant ce formulaire, j'accepte de recevoir des informations par courriel d”Elco et de ses partenaires.
+        * {t('disclaimer')}
       </Disclaimer>
     </Form >
   )

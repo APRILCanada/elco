@@ -2,25 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useI18next } from 'gatsby-plugin-react-i18next'
 
 const Card = ({ title, img, desc, direction = "left" }) => {
   const image = getImage(img);
-  
+  const { language: lang } = useI18next()
+
   return (
     <article>
       <Shape direction={direction}>
-        <GatsbyImage image={image} alt={title} />
+        <GatsbyImage image={image} alt={title[lang]} />
       </Shape>
-      <Name direction={direction}>{title}</Name>
-      <Description direction={direction}>{desc}</Description>
+      <Name direction={direction}>{title[lang]}</Name>
+      <Description direction={direction}>{desc && desc[lang]}</Description>
     </article>
   );
 };
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.object.isRequired,
   img: PropTypes.object.isRequired,
-  desc: PropTypes.string,
+  desc: PropTypes.object,
   direction: PropTypes.string
 };
 
