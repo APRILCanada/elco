@@ -14,7 +14,7 @@ const ContactForm = () => {
     const { email, phone, subject, message } = data
     setSendingEmail(true)
 
-    const res = await fetch('/.netlify/functions/contact', {
+    const res = await fetch('/api/contact', {
       method: 'POST',
       body: JSON.stringify({
         email,
