@@ -1,81 +1,100 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Trans, useTranslation } from 'react-i18next'
 import styled, { css } from 'styled-components'
 
 const ContactForm = () => {
+  const [sendingEmail, setSendingEmail] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm()
   const { t } = useTranslation()
 
   const handleFormSubmit = async (data, e) => {
     e.preventDefault()
-    console.log('data', data)
+    const { email, phone, subject, message } = data
+    setSendingEmail(true)
+
+    const res = await fetch('/.netlify/functions/contact', {
+      method: 'POST',
+      body: JSON.stringify({
+        email,
+        phone,
+        subject,
+        message,
+      }),
+    })
+
+    if (res.ok) {
+      setSendingEmail(false)
+      setEmailSent(true)
+      e.target.reset() // reset after form submit
+    }
   }
 
-  return (
-    <Form onSubmit={handleSubmit(handleFormSubmit)}>
-      {/* Email */}
-      <FormGroup>
-        <Label><Trans>Email</Trans>:</Label>
-        <Input
-          type='text'
-          {...register('email', {
-            required: t('emailRequired'),
-            pattern: {
-              value:
-                /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              message: t('emailInvalid')
-            }
-          })}
-        />
-        {errors.email && <Error>{errors.email.message}</Error>}
-      </FormGroup>
+return (
+  <Form onSubmit={handleSubmit(handleFormSubmit)}>
+    {/* Email */}
+    <FormGroup>
+      <Label><Trans>Email</Trans>:</Label>
+      <Input
+        type='text'
+        {...register('email', {
+          required: t('emailRequired'),
+          pattern: {
+            value:
+              /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            message: t('emailInvalid')
+          }
+        })}
+      />
+      {errors.email && <Error>{errors.email.message}</Error>}
+    </FormGroup>
 
-      {/* Phone */}
-      <FormGroup>
-        <Label><Trans>Phone</Trans>:</Label>
-        <Input
-          type='tel'
-          {...register('phone', {
-            required: t('phoneRequired')
-          })}
-        />
-        {errors.phone && <Error>{errors.phone.message}</Error>}
-      </FormGroup>
+    {/* Phone */}
+    <FormGroup>
+      <Label><Trans>Phone</Trans>:</Label>
+      <Input
+        type='tel'
+        {...register('phone', {
+          required: t('phoneRequired')
+        })}
+      />
+      {errors.phone && <Error>{errors.phone.message}</Error>}
+    </FormGroup>
 
-      {/* Subject */}
-      <FormGroup>
-        <Label><Trans>Subject</Trans>:</Label>
-        <Input
-          type='text'
-          {...register('subject', {
-            required: t('subjectRequired')
-          })}
-        />
-        {errors.subject && <Error>{errors.subject.message}</Error>}
-      </FormGroup>
+    {/* Subject */}
+    <FormGroup>
+      <Label><Trans>Subject</Trans>:</Label>
+      <Input
+        type='text'
+        {...register('subject', {
+          required: t('subjectRequired')
+        })}
+      />
+      {errors.subject && <Error>{errors.subject.message}</Error>}
+    </FormGroup>
 
-      {/* Message */}
-      <FormGroup>
-        <Label>Message:</Label>
-        <Textarea
-          {...register('message', {
-            required: t('messageRequired')
-          })}
-          rows="10"
-        ></Textarea>
-        {errors.message && <Error>{errors.message.message}</Error>}
-      </FormGroup>
+    {/* Message */}
+    <FormGroup>
+      <Label>Message:</Label>
+      <Textarea
+        {...register('message', {
+          required: t('messageRequired')
+        })}
+        rows="10"
+      ></Textarea>
+      {errors.message && <Error>{errors.message.message}</Error>}
+    </FormGroup>
 
-      <Button type="submit">
-        <Trans>Submit</Trans>
-      </Button>
+    <Button type="submit">
+      <Trans>Submit</Trans>
+    </Button>
 
-      <Disclaimer>
-        * {t('disclaimer')}
-      </Disclaimer>
-    </Form >
-  )
+    <Disclaimer>
+      * {t('disclaimer')}
+    </Disclaimer>
+  </Form >
+)
 }
 
 export default ContactForm
