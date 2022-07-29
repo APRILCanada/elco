@@ -31,11 +31,11 @@ const Footer = () => {
                 {t('openingHours')}
             </OpeningHours>
             <Socials>
-                <a href="https://www.facebook.com/ElcoAssurances/" target="_blank" aria-label={t('facebookPage')}>
+                <a href="https://www.facebook.com/ElcoAssurances/" target="_blank" rel="noreferrer" aria-label={t('facebookPage')}>
                     <FacebookIcon />
                 </a>
 
-                <a href="https://www.linkedin.com/company/elco-assurances-inc/?originalSubdomain=ca" target="_blank" aria-label={t('linkedinPage')}>
+                <a href="https://www.linkedin.com/company/elco-assurances-inc/?originalSubdomain=ca" target="_blank" rel="noreferrer" aria-label={t('linkedinPage')}>
                     <LinkedinIcon />
                 </a>
             </Socials>

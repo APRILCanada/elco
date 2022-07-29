@@ -17,6 +17,7 @@
   "dependencies": {
     "@fontsource/poppins": "^4.5.8",
     "babel-plugin-styled-components": "^2.0.7",
+    "dotenv": "^16.0.1",
     "framer-motion": "^6.5.1",
     "gatsby": "^4.18.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
@@ -36,6 +37,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.33.1",
     "react-i18next": "^11.18.1",
+    "sib-api-v3-sdk": "^8.4.0",
     "styled-components": "^5.3.5"
   }
 }

@@ -2,3 +2,7 @@ node_modules/
 .cache/
 public
 README.md
+.env
+
+# Local Netlify folder
+.netlify
