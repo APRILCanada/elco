@@ -5,7 +5,8 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import media from '../styles/breakpoints';
 import Hamburger from './Hamburger';
 import { motion, useCycle } from 'framer-motion'
-import { Trans, useI18next, Link } from 'gatsby-plugin-react-i18next'
+import { Trans } from 'gatsby-plugin-react-i18next'
+import LanguageSelector from './LanguageSelector';
 
 const sidebar = {
     open: (height = 150) => ({
@@ -27,7 +28,6 @@ const sidebar = {
 };
 
 const Navbar = () => {
-    const { languages, originalPath } = useI18next()
     const [isOpen, toggleOpen] = useCycle(false, true);
 
     return (
@@ -50,17 +50,7 @@ const Navbar = () => {
                 <MenuLink to='/#solutions'>Solutions</MenuLink>
                 <MenuLink to='/#team'><Trans>Team</Trans></MenuLink>
                 <MenuLink to='/#contact'>Contact</MenuLink>
-                <Languages>
-                    {languages.map((lang) => {
-                        return (
-                            <li key={lang}>
-                                <Link to={originalPath} language={lang}>
-                                    {lang}
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </Languages>
+                <LanguageSelector />
             </Menu>
 
             <MenuToggle initial={false} animate={isOpen ? "open" : "closed"}>
@@ -132,7 +122,4 @@ const MenuToggle = styled(motion.div)`
    ${media.s`
     display: none;
    `}
-`
-
-const Languages = styled.ul`
 `
