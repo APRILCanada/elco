@@ -11,8 +11,8 @@ const Hero = () => {
   return (
     <Section>
       <StaticImage src='../assets/images/hero.jpg' width={500} height={500} alt='Contact Elco' placeholder='blurred' className='shape-to-right' />
-      <Cta>
-        <MainTitle initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+      <Cta initial={'start'} animate={'end'} transition={{ staggerChildren: 0.5 }}>
+        <MainTitle variants={headingAnimate}>
           <span className='highlight-primary'>ELCO </span>- <Trans>Discover specialized insurance solutions</Trans>
           <br />
           <span className='highlight'>
@@ -20,7 +20,7 @@ const Hero = () => {
             <Trans>designed for you</Trans>.
           </span>
         </MainTitle>
-        <Buttons>
+        <Buttons variants={buttonFadeIn}>
           <ActionButton>
             <AnchorLink to='/#contact' stripHash>
               <Trans>Contact us</Trans>
@@ -51,7 +51,7 @@ const Section = styled.section`
         align-items: flex-end;
   `}
 `;
-const Cta = styled.div`
+const Cta = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -76,7 +76,7 @@ const MainTitle = styled(motion.h1)`
   `}
 `;
 
-const Buttons = styled.div`
+const Buttons = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -107,3 +107,14 @@ const Buttons = styled.div`
         }
   `}
 `;
+
+// animations
+const headingAnimate = {
+  start: { opacity: 0, x: 50 },
+  end: { opacity: 1, x: 0, transition: { duration: 1 } }
+};
+
+const buttonFadeIn = {
+  start: { opacity: 0 },
+  end: { opacity: 1, transition: { duration: 1 } }
+};

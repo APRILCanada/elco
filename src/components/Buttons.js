@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const ActionButton = styled.button`
+export const ActionButton = styled(motion.button)`
   background-color: ${({ outlined }) => outlined ? "var(--color-white)" : "var(--color-secondary)"};
   border: 1px solid var(--color-secondary);
   color: ${({ outlined }) => outlined ? "var(--color-secondary)" : "var(--color-white)"};

@@ -163,17 +163,6 @@ img {
   font-weight: 800;
   color: var(--color-primary);
 }
-
-@media (max-width: 580px) {
-  .float {
-     border-radius: 50%;
-      float: left;
-      margin-right: var(--spacing-l);
-      margin-bottom: var(--spacing-l);
-      min-width: 85px;
-      shape-outside: circle();
-    }
-}
 `;
 
 export default GlobalStyle;
