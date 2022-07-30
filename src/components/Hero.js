@@ -19,7 +19,7 @@ const Hero = () => {
                 className='shape-to-right'
             />
             <Cta>
-                <MainTitle initial={{ opacity: 0, x: 75 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.5 }}>
+                <MainTitle initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
                     <span className="highlight-primary">ELCO </span>
                     - <Trans>Discover specialized insurance solutions</Trans><br />
                     <span className="highlight"> <Trans>designed for you</Trans>.</span>

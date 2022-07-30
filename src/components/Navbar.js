@@ -44,6 +44,7 @@ const Navbar = () => {
                 <MenuMobileLink to='/#solutions'>Solutions</MenuMobileLink>
                 <MenuMobileLink to='/#team'><Trans>Team</Trans></MenuMobileLink>
                 <MenuMobileLink to='/#contact'>Contact</MenuMobileLink>
+                <LanguageSelector />
             </SideNav>
 
             <Menu>
@@ -56,7 +57,6 @@ const Navbar = () => {
             <MenuToggle initial={false} animate={isOpen ? "open" : "closed"}>
                 <Hamburger toggle={() => toggleOpen()} />
             </MenuToggle>
-
         </Header>
     )
 }
