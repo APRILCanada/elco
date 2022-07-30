@@ -41,16 +41,16 @@ const Navbar = () => {
                 imgStyle={{ objectPosition: 'bottom' }}
             />
             <SideNav initial={false} animate={isOpen ? "open" : "closed"} variants={sidebar}>
-                <MenuMobileLink to='/#solutions'>Solutions</MenuMobileLink>
-                <MenuMobileLink to='/#team'><Trans>Team</Trans></MenuMobileLink>
-                <MenuMobileLink to='/#contact'>Contact</MenuMobileLink>
+                <MenuMobileLink to='/#solutions' stripHash>Solutions</MenuMobileLink>
+                <MenuMobileLink to='/#team' stripHash><Trans>Team</Trans></MenuMobileLink>
+                <MenuMobileLink to='/#contact' stripHash>Contact</MenuMobileLink>
                 <LanguageSelector />
             </SideNav>
 
             <Menu>
-                <MenuLink to='/#solutions'>Solutions</MenuLink>
-                <MenuLink to='/#team'><Trans>Team</Trans></MenuLink>
-                <MenuLink to='/#contact'>Contact</MenuLink>
+                <MenuLink to='/#solutions' stripHash>Solutions</MenuLink>
+                <MenuLink to='/#team' stripHash><Trans>Team</Trans></MenuLink>
+                <MenuLink to='/#contact' stripHash>Contact</MenuLink>
                 <LanguageSelector />
             </Menu>
 
