@@ -5,6 +5,7 @@ import Card from './Card';
 import SectionHeading from './SectionHeading';
 import QuestionIcon from '../assets/icons/question';
 import { Trans } from 'react-i18next';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Solutions = () => {
   const {
@@ -32,13 +33,19 @@ const Solutions = () => {
 
   return (
     <Section>
-      <SectionHeading id="solutions"><Trans>Our solutions</Trans></SectionHeading>
+      <SectionHeading id='solutions'>
+        <Trans>Our solutions</Trans>
+      </SectionHeading>
       <Grid>
         {solutions.map(({ node: solution }) => (
           <Card key={solution.id} {...solution} />
         ))}
         <CtaQuestions>
-          <span><Trans>Any questions</Trans></span>
+          <AnchorLink to='/#contact' stripHash>
+            <span>
+              <Trans>Any questions</Trans>
+            </span>
+          </AnchorLink>
           <QuestionIcon />
         </CtaQuestions>
       </Grid>
@@ -78,4 +85,10 @@ const CtaQuestions = styled.div`
   text-align: center;
   font-weight: bold;
   font-size: 1.9rem;
-`
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: var(--color-secondary-darker) ;
+  }
+`;

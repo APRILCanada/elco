@@ -171,6 +171,11 @@ const Button = styled.button`
   padding: 0.5rem 1.5rem;
   height: 50px;
   box-shadow: var(--box-shadow-btn);
+  transition: background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: var(--color-primary-darker);
+  }
 `
 
 const Disclaimer = styled.small`

@@ -18,4 +18,11 @@ export const ActionButton = styled.button`
   min-width: 200px;
   min-height: 40px;
   box-shadow: ${({ outlined }) => outlined ? "none" : "var(--box-shadow-btn)"};
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background-color: ${({ outlined }) => !outlined && "var(--color-secondary-darker)"};
+    border: ${({ outlined }) => !outlined && "1px solid var(--color-secondary-darker)"};
+    box-shadow:  ${({ outlined }) => outlined && "var(--box-shadow-btn)"};
+  }
 `
