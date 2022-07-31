@@ -111,10 +111,10 @@ const Buttons = styled(motion.div)`
 // animations
 const headingAnimate = {
   start: { opacity: 0, x: 50 },
-  end: { opacity: 1, x: 0, transition: { duration: 1 } }
+  end: { opacity: 1, x: 0, transition: { type: 'easeIn', duration: 1 } }
 };
 
 const buttonFadeIn = {
   start: { opacity: 0 },
-  end: { opacity: 1, transition: { duration: 1 } }
+  end: { opacity: 1, transition: { type:'easeIn', duration: 0.5 } }
 };
