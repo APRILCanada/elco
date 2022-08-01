@@ -39,6 +39,11 @@ const Footer = () => {
                     <LinkedinIcon />
                 </a>
             </Socials>
+            <Legal>
+                <small>&copy; 2022 Elco All Rights Reserved</small>
+                <small>Policy Policy</small>
+                <small>Terms and Conditions</small>
+            </Legal>
         </Wrapper>
     )
 }
@@ -73,5 +78,22 @@ const Socials = styled.div`
 
     svg {
         margin-right: 1rem;
+    }
+`
+
+const Legal = styled.div`
+    grid-column: 1 / 3;
+    align-items: center;
+    margin-top: var(--spacing-m);
+    padding-top: var(--spacing-s);
+    border-top: 1px solid white;
+    font-size: 0.9rem;
+
+    & > small {
+        margin-right: var(--spacing-m);
+        &:not(:first-child) {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 `
