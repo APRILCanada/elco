@@ -4,9 +4,13 @@ import { StaticImage } from 'gatsby-plugin-image'
 import FacebookIcon from '../assets/icons/facebook'
 import LinkedinIcon from '../assets/icons/linkedin'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { Trans } from 'react-i18next'
+import { useModal } from '../context/modal'
+import { PRIVACY_MODAL, TERMS_CONDITIONS_MODAL } from './ModalManager/modalTypes'
 
 const Footer = () => {
     const { t } = useTranslation()
+    const { setOpenModal, setModalType } = useModal()
 
     return (
         <Wrapper>
@@ -40,9 +44,15 @@ const Footer = () => {
                 </a>
             </Socials>
             <Legal>
-                <small>&copy; 2022 Elco All Rights Reserved</small>
-                <small>Policy Policy</small>
-                <small>Terms and Conditions</small>
+                <small>&copy; <Trans>2022 Elco All Rights Reserved</Trans></small>
+                <small onClick={() => {
+                    setOpenModal(true)
+                    setModalType(PRIVACY_MODAL)
+                }}><Trans>Privacy Policy</Trans></small>
+                <small onClick={() => {
+                    setOpenModal(true)
+                    setModalType(TERMS_CONDITIONS_MODAL)
+                }}><Trans>Terms and Conditions</Trans></small>
             </Legal>
         </Wrapper>
     )

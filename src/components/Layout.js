@@ -4,17 +4,19 @@ import PropTypes from 'prop-types';
 import GlobalStyle from '../styles/global'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import PrivacyPolicy from "./PrivacyPolicy";
+import { ModalProvider } from "../context/modal";
 
 
 const Layout = ({ children }) => (
-    <>
+    <ModalProvider>
         <GlobalStyle />
         <Navbar />
         <Main>
             {children}
         </Main>
         <Footer />
-    </>
+    </ModalProvider>
 )
 
 Layout.propTypes = {
