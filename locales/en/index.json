@@ -24,5 +24,6 @@
     "phoneRequired": "Phone is required",
     "subjectRequired": "Subject is required",
     "messageRequired": "Message is required",
-    "Welcome": "Welcome"
+    "Welcome": "Welcome",
+    "Message sent! Thank you!": "Message sent! Thank you!"
 }

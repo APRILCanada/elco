@@ -24,5 +24,6 @@
     "phoneRequired": "Votre téléphone est requis",
     "subjectRequired": "Veuillez entrer un sujet",
     "messageRequired": "Veuillez entrer un message",
-    "Welcome": "Bienvenue"
+    "Welcome": "Bienvenue",
+    "Message sent! Thank you!": "Message envoyé! Merci!"
 }

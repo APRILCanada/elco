@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
         --color-secondary-darker: #DE9930;
         --color-tertiary: #013D62;
         --color-error: #cc0000;
+        --color-success: #4BB543;
+        --color-disabled: #d3d3d3;
         
         --color-grey-light: #F1F1F1;
         --color-white: #FFFFFF;

@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Trans, useTranslation } from 'react-i18next'
+import { AnimatePresence } from 'framer-motion'
 import styled, { css } from 'styled-components'
+import Alert from './Alert'
+import CheckIcon from '../assets/icons/check'
 
 const ContactForm = () => {
   const [sendingEmail, setSendingEmail] = useState(false)
@@ -31,70 +34,76 @@ const ContactForm = () => {
     }
   }
 
-return (
-  <Form onSubmit={handleSubmit(handleFormSubmit)}>
-    {/* Email */}
-    <FormGroup>
-      <Label><Trans>Email</Trans>:</Label>
-      <Input
-        type='text'
-        {...register('email', {
-          required: t('emailRequired'),
-          pattern: {
-            value:
-              /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            message: t('emailInvalid')
-          }
-        })}
-      />
-      {errors.email && <Error>{errors.email.message}</Error>}
-    </FormGroup>
+  return (
+    <Form onSubmit={handleSubmit(handleFormSubmit)}>
+      {/* Email */}
+      <FormGroup>
+        <Label><Trans>Email</Trans>:</Label>
+        <Input
+          type='text'
+          {...register('email', {
+            required: t('emailRequired'),
+            pattern: {
+              value:
+                /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              message: t('emailInvalid')
+            }
+          })}
+        />
+        {errors.email && <Error>{errors.email.message}</Error>}
+      </FormGroup>
 
-    {/* Phone */}
-    <FormGroup>
-      <Label><Trans>Phone</Trans>:</Label>
-      <Input
-        type='tel'
-        {...register('phone', {
-          required: t('phoneRequired')
-        })}
-      />
-      {errors.phone && <Error>{errors.phone.message}</Error>}
-    </FormGroup>
+      {/* Phone */}
+      <FormGroup>
+        <Label><Trans>Phone</Trans>:</Label>
+        <Input
+          type='tel'
+          {...register('phone', {
+            required: t('phoneRequired')
+          })}
+        />
+        {errors.phone && <Error>{errors.phone.message}</Error>}
+      </FormGroup>
 
-    {/* Subject */}
-    <FormGroup>
-      <Label><Trans>Subject</Trans>:</Label>
-      <Input
-        type='text'
-        {...register('subject', {
-          required: t('subjectRequired')
-        })}
-      />
-      {errors.subject && <Error>{errors.subject.message}</Error>}
-    </FormGroup>
+      {/* Subject */}
+      <FormGroup>
+        <Label><Trans>Subject</Trans>:</Label>
+        <Input
+          type='text'
+          {...register('subject', {
+            required: t('subjectRequired')
+          })}
+        />
+        {errors.subject && <Error>{errors.subject.message}</Error>}
+      </FormGroup>
 
-    {/* Message */}
-    <FormGroup>
-      <Label>Message:</Label>
-      <Textarea
-        {...register('message', {
-          required: t('messageRequired')
-        })}
-        rows="10"
-      ></Textarea>
-      {errors.message && <Error>{errors.message.message}</Error>}
-    </FormGroup>
+      {/* Message */}
+      <FormGroup>
+        <Label>Message:</Label>
+        <Textarea
+          {...register('message', {
+            required: t('messageRequired')
+          })}
+          rows="10"
+        ></Textarea>
+        {errors.message && <Error>{errors.message.message}</Error>}
+      </FormGroup>
 
-    <Button type="submit">
-      <Trans>Submit</Trans>
-    </Button>
+      <Button type="submit" disabled={emailSent}>
+        <Trans>Submit</Trans>
+      </Button>
 
-    <Disclaimer>
-      * {t('disclaimer')}
-    </Disclaimer>
-  </Form >
-)
+      <Disclaimer>
+        * {t('disclaimer')}
+      </Disclaimer>
+      {
+        emailSent && (
+          <Alert>
+            <CheckIcon /><Trans>Message sent! Thank you!</Trans>
+          </Alert>)
+      }
+    </Form >
+  )
 }
 
 export default ContactForm
@@ -108,6 +117,7 @@ const Form = styled.form`
   align-items: center;
   padding: var(--spacing-xl) var(--spacing-m);
   border-radius: 10px;
+  position: relative;
 
   & > *:not(:last-child) {
     margin-bottom: var(--spacing-m);
@@ -175,6 +185,10 @@ const Button = styled.button`
 
   &:hover {
     background-color: var(--color-primary-darker);
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled);
   }
 `
 
