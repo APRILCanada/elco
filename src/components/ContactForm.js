@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Trans, useTranslation } from 'react-i18next'
-import { AnimatePresence } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import Alert from './Alert'
 import CheckIcon from '../assets/icons/check'
@@ -9,6 +8,7 @@ import CheckIcon from '../assets/icons/check'
 const ContactForm = () => {
   const [sendingEmail, setSendingEmail] = useState(false)
   const [emailSent, setEmailSent] = useState(false)
+  const [error, setError] = useState(true)
   const { register, handleSubmit, formState: { errors } } = useForm()
   const { t } = useTranslation()
 
@@ -31,6 +31,8 @@ const ContactForm = () => {
       setSendingEmail(false)
       setEmailSent(true)
       e.target.reset() // reset after form submit
+    } else {
+      setError(true)
     }
   }
 
@@ -96,10 +98,18 @@ const ContactForm = () => {
       <Disclaimer>
         * {t('disclaimer')}
       </Disclaimer>
+
+      {/* Pop up on form success or form error */}
       {
         emailSent && (
-          <Alert>
+          <Alert type="success">
             <CheckIcon /><Trans>Message sent! Thank you!</Trans>
+          </Alert>)
+      }
+      {
+        error && (
+          <Alert type="error">
+            <Trans>An error occured. Please resubmit your email.</Trans>
           </Alert>)
       }
     </Form >

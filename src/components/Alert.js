@@ -1,18 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
-const Alert = ({ children }) => (
-    <Box>
+const Alert = ({ children, type }) => (
+    <Box type={type}>
         {children}
     </Box>
 )
 
 export default Alert
 
+Alert.propTypes = {
+    children: PropTypes.node.isRequired,
+    type: PropTypes.string.isRequired
+}
+
 // CSS
 const Box = styled.div`
     width: 100%;
-    background-color: var(--color-success);
+    background-color: ${({ type }) => {
+        if (type === "success") return "var(--color-success)";
+        if (type === "error") return "var(--color-error)"
+    }};
     color: var(--color-white);
     position: absolute;
     bottom: 0;

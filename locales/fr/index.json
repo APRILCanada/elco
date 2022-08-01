@@ -25,5 +25,6 @@
     "subjectRequired": "Veuillez entrer un sujet",
     "messageRequired": "Veuillez entrer un message",
     "Welcome": "Bienvenue",
-    "Message sent! Thank you!": "Message envoyé! Merci!"
+    "Message sent! Thank you!": "Message envoyé! Merci!",
+    "An error occured. Please resubmit your email.": "Une erreur s'est produite. Veuillez resoumettre le formulaire."
 }
