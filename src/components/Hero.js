@@ -26,7 +26,7 @@ const Hero = () => {
               <Trans>Contact us</Trans>
             </AnchorLink>
           </ActionButton>
-          <ActionButton outlined>
+          <ActionButton outlined="true">
             <StaticImage src='../assets/icons/phone.png' width={20} height={20} alt='Call Elco' placeholder='blurred' style={{ marginRight: 'var(--spacing-s)' }} />
             <span>1 800-993-7070</span>
           </ActionButton>

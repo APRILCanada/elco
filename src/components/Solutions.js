@@ -6,6 +6,7 @@ import SectionHeading from './SectionHeading';
 import QuestionIcon from '../assets/icons/question';
 import { Trans } from 'react-i18next';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { motion } from "framer-motion"
 
 const Solutions = () => {
   const {

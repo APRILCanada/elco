@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 
 export const ActionButton = styled(motion.button)`
@@ -27,3 +28,7 @@ export const ActionButton = styled(motion.button)`
     box-shadow:  ${({ outlined }) => outlined && "var(--box-shadow-btn)"};
   }
 `
+
+ActionButton.propTypes = {
+  outlined: PropTypes.string
+}

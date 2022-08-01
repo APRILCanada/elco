@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Overlay from './Overlay'
 
 const Modal = ({ children, type }) => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
@@ -19,16 +19,18 @@ const Modal = ({ children, type }) => {
     }
 
     return (
-        <Overlay onClick={() => setOpen(false)}>
-            <BoxModal
-                role="dialog"
-                aria-modal="true"
-                onClick={e => e.stopPropagation()} // empêcher la fermeture du modal au clic dessus
-                type={type}
-            >
-                {children}
-            </BoxModal>
-        </Overlay>
+        open && (
+            <Overlay onClick={() => setOpen(false)}>
+                <BoxModal
+                    role="dialog"
+                    aria-modal="true"
+                    onClick={e => e.stopPropagation()} // empêcher la fermeture du modal au clic dessus
+                    type={type}
+                >
+                    {children}
+                </BoxModal>
+            </Overlay>
+        )
     )
 }
 

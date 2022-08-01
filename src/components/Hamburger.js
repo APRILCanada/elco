@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import media from "../styles/breakpoints";
 
 const Path = props => {
-    console.log('props', props)
     return (
         <motion.path
             fill="transparent"
