@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { useModal } from '../../context/modal'
 import Overlay from './Overlay'
+import { useModal } from '../../context/modal'
 
 const Modal = ({ children }) => {
-    const { setOpenModal } = useModal()
+    const { closeModal } = useModal()
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
@@ -15,12 +15,12 @@ const Modal = ({ children }) => {
 
     const handleKeyDown = e => {
         if (e.key === 'Escape' || e.keyCode === 27) {
-            setOpenModal(false)
+            closeModal(false)
         }
     }
 
     return (
-        <Overlay onClick={() => setOpenModal(false)}>
+        <Overlay onClick={() => closeModal(false)}>
             <BoxModal
                 role="dialog"
                 aria-modal="true"

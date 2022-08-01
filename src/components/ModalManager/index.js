@@ -1,17 +1,15 @@
 import React from 'react'
-import { useModal } from '../../context/modal'
 
-//import modal components
-import PrivacyPolicy from '../PrivacyPolicy'
-import TermsConditions from '../TermsConditions'
+// modal components
+import PrivacyPolicyModal from '../PrivacyPolicy'
+import TermsConditionsModal from '../TermsConditions'
 
 const MODAL_COMPONENTS = {
-  PRIVACY_MODAL: PrivacyPolicy,
-  TERMS_CONDITIONS_MODAL: TermsConditions
+  PRIVACY_MODAL: PrivacyPolicyModal,
+  TERMS_CONDITIONS_MODAL: TermsConditionsModal
 }
 
-const ModalManager = () => {
-  const { modalType, modalProps } = useModal()
+const ModalManager = ({ modalType }) => {
 
   if (!modalType) {
     return null
@@ -19,7 +17,7 @@ const ModalManager = () => {
 
   const ModalComponent = MODAL_COMPONENTS[modalType]
 
-  return <ModalComponent {...modalProps} />
+  return <ModalComponent />
 }
 
 export default ModalManager

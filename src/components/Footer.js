@@ -10,7 +10,7 @@ import { PRIVACY_MODAL, TERMS_CONDITIONS_MODAL } from './ModalManager/modalTypes
 
 const Footer = () => {
     const { t } = useTranslation()
-    const { setOpenModal, setModalType } = useModal()
+    const { openModal } = useModal()
 
     return (
         <Wrapper>
@@ -45,14 +45,8 @@ const Footer = () => {
             </Socials>
             <Legal>
                 <small>&copy; <Trans>2022 Elco All Rights Reserved</Trans></small>
-                <small onClick={() => {
-                    setOpenModal(true)
-                    setModalType(PRIVACY_MODAL)
-                }}><Trans>Privacy Policy</Trans></small>
-                <small onClick={() => {
-                    setOpenModal(true)
-                    setModalType(TERMS_CONDITIONS_MODAL)
-                }}><Trans>Terms and Conditions</Trans></small>
+                <small onClick={() => openModal(PRIVACY_MODAL)}><Trans>Privacy Policy</Trans></small>
+                <small onClick={() => openModal(TERMS_CONDITIONS_MODAL)}><Trans>Terms and Conditions</Trans></small>
             </Legal>
         </Wrapper>
     )
