@@ -6,7 +6,9 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-size: 0.9rem;
         --color-primary: #2188E4;
+        --color-primary-darker: #1A6CB6;
         --color-secondary: #F7AA36;
+        --color-secondary-darker: #DE9930;
         --color-tertiary: #013D62;
         --color-error: #cc0000;
         
@@ -23,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
         --spacing-l: 3rem;
         --spacing-xl: 5rem;
 
-        --box-shadow-btn: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        --box-shadow-btn: 0px 3px 12px rgba(0, 0, 0, 0.2);
 
         --max-width: 1380px;
         --max-content: 980px;
@@ -38,6 +40,7 @@ button + button {
 section {
   padding: var(--spacing-l) 0;
 }
+
 
 *,
 *::before,
@@ -128,6 +131,7 @@ h1, h2, h3 {
 
 a {
   text-decoration: none;
+  color: var(--color-white) ;
 }
 
 img {
@@ -158,17 +162,6 @@ img {
 .highlight-primary {
   font-weight: 800;
   color: var(--color-primary);
-}
-
-@media (max-width: 580px) {
-  .float {
-     border-radius: 50%;
-      float: left;
-      margin-right: var(--spacing-l);
-      margin-bottom: var(--spacing-l);
-      min-width: 85px;
-      shape-outside: circle();
-    }
 }
 `;
 

@@ -28,5 +28,6 @@ const Main = styled.main`
   padding-left: var(--spacing-m);
   padding-right: var(--spacing-m);
   max-width: var(--max-width);
-  margin: var(--spacing-l) auto;
+  margin: 0 auto;
+  margin-bottom: var(--spacing-l);
 `

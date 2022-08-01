@@ -23,5 +23,6 @@
     "emailInvalid": "Email is invalid",
     "phoneRequired": "Phone is required",
     "subjectRequired": "Subject is required",
-    "messageRequired": "Message is required"
+    "messageRequired": "Message is required",
+    "Welcome": "Welcome"
 }
