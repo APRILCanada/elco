@@ -26,5 +26,6 @@
     "messageRequired": "Message is required",
     "Welcome": "Welcome",
     "Message sent! Thank you!": "Message sent! Thank you!",
-    "An error occured. Please resubmit your email.": "An error occured. Please resubmit your email."
+    "An error occured. Please resubmit your email.": "An error occured. Please resubmit your email.",
+    "Sending in progress": "Sending in progress"
 }

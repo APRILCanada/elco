@@ -4,11 +4,12 @@ import { Trans, useTranslation } from 'react-i18next'
 import styled, { css } from 'styled-components'
 import Alert from './Alert'
 import CheckIcon from '../assets/icons/check'
+import CircleLoader from './Loader'
 
 const ContactForm = () => {
   const [sendingEmail, setSendingEmail] = useState(false)
   const [emailSent, setEmailSent] = useState(false)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm()
   const { t } = useTranslation()
 
@@ -92,7 +93,8 @@ const ContactForm = () => {
       </FormGroup>
 
       <Button type="submit" disabled={emailSent}>
-        <Trans>Submit</Trans>
+        {sendingEmail && <CircleLoader />}
+        {sendingEmail ? <Trans>Sending in progress</Trans> : <Trans>Submit</Trans> }
       </Button>
 
       <Disclaimer>
@@ -199,6 +201,10 @@ const Button = styled.button`
 
   &:disabled {
     background-color: var(--color-disabled);
+  }
+
+  & > div {
+    margin-right: var(--spacing-s);
   }
 `
 
