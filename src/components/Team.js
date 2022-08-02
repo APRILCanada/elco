@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Card from './Card';
 import SectionHeading from './SectionHeading';
 import { Trans } from 'react-i18next';
+import media from '../styles/breakpoints';
 
 const Team = () => {
   const {
@@ -62,6 +63,10 @@ const Wrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     padding: 0 var(--spacing-m);
+
+    ${media.m`
+      padding: 0;
+    `}
 `
 
 const Grid = styled.div`
