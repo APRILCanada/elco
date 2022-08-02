@@ -49,6 +49,6 @@ const BoxModal = styled.div`
     width: 60%;
     height: 90%;
     z-index: 1111;
-    text-align: center;
+    text-align: left;
     overflow-y: scroll;
 `
