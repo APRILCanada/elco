@@ -33,6 +33,7 @@ exports.handler = async (event) => {
                 to: receiver,
                 subject: `${subject}`,
                 htmlContent: `
+                    <h2>Un nouveau message depuis le site d'Elco!</h2>
                     <p>Message: ${message}</p>
                     <p>Téléphone: ${phone}</p>
                 `

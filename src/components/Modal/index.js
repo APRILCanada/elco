@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Overlay from './Overlay'
 import { useModal } from '../../context/modal'
 
+
 const Modal = ({ children }) => {
     const { closeModal } = useModal()
 
@@ -20,12 +21,13 @@ const Modal = ({ children }) => {
     }
 
     return (
-        <Overlay onClick={() => closeModal(false)}>
+        <Overlay onClick={() => closeModal()}>
             <BoxModal
                 role="dialog"
                 aria-modal="true"
                 onClick={e => e.stopPropagation()} // empêcher la fermeture du modal au clic dessus
             >
+                <CloseModal onClick={() => closeModal()}>&#10006;</CloseModal>
                 {children}
             </BoxModal>
         </Overlay>
@@ -46,9 +48,15 @@ const BoxModal = styled.div`
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 2px 2px 15px rgba(79, 81, 80, 0.1);
-    width: 60%;
+    width: 95%;
+    max-width: var(--max-content);
     height: 90%;
     z-index: 1111;
     text-align: left;
     overflow-y: scroll;
+`
+
+const CloseModal = styled.span`
+    align-self: flex-end;
+    cursor: pointer;
 `

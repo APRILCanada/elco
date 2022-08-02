@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useI18next } from 'gatsby-plugin-react-i18next'
-import { motion } from 'framer-motion'
+
 
 const Card = ({ title, img, desc, direction = "left" }) => {
   const image = getImage(img);

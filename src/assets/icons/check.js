@@ -14,4 +14,5 @@ const Svg = styled.svg`
   width: 25px;
   height: 25px;
   fill: #fff;
+  justify-self: flex-end;
 `
