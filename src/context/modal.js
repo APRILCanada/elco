@@ -10,23 +10,15 @@ const ModalContext = createContext()
  * Création du Provider Modal
  */
 export const ModalProvider = ({ children }) => {
-    const [isOpen, setOpenModal] = useState(false)
     const [modalType, setModalType] = useState('')
 
-    const openModal = (type) => {
-        setOpenModal(true)
-        setModalType(type)
-    }
-
-    const closeModal = () => {
-        setOpenModal(false)
-        setModalType('')
-    }
+    const openModal = (type) => setModalType(type)
+    const closeModal = () => setModalType('')
     
     return (
         <ModalContext.Provider value={{ openModal, closeModal }}>
             {children}
-            {isOpen && <ModalManager modalType={modalType} />}
+            <ModalManager modalType={modalType} />
         </ModalContext.Provider>
     )
 }
