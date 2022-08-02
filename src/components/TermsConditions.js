@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from './Modal'
+import { useI18next } from 'gatsby-plugin-react-i18next'
 
 const TermsConditions = (() => {
     const { language } = useI18next()
