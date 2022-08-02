@@ -18,14 +18,8 @@ exports.handler = async (event) => {
         apiKey.apiKey = process.env.SIB_API_KEY
 
         const tranEmailApi = new Sib.TransactionalEmailsApi()
-        const sender = {
-            email
-        }
-        const receiver = [
-            {
-                email: 'p.leroy.mtl@gmail.com'
-            }
-        ]
+        const sender = { email }
+        const receiver = [{ email: 'info@elco.ca' }]
 
         const response = await tranEmailApi
             .sendTransacEmail({
@@ -33,7 +27,7 @@ exports.handler = async (event) => {
                 to: receiver,
                 subject: `${subject}`,
                 htmlContent: `
-                    <h2>Un nouveau message depuis le site d'Elco!</h2>
+                    <h3>Un nouveau message depuis le site d'Elco!</h3>
                     <p>Message: ${message}</p>
                     <p>Téléphone: ${phone}</p>
                 `
