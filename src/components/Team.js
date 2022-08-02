@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     max-width: var(--max-content);
     margin-left: auto;
     margin-right: auto;
-    //padding: 0 2.1rem; // temporary weird padding bug
+    padding: 0 var(--spacing-m); // temporary weird padding bug
 `
 
 const Grid = styled.div`
