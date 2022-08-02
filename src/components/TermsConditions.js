@@ -2,7 +2,9 @@ import React from 'react'
 import Modal from './Modal'
 
 const TermsConditions = (() => {
-    return (
+    const { language } = useI18next()
+
+    return language === "en" ? (
         <Modal>
             <h1>Terms and conditions</h1>
             <h2>Terms of use</h2>
@@ -182,7 +184,188 @@ const TermsConditions = (() => {
             <p>For more information on the legal issues contained in these terms of use, or any questions or problems about this service, please write to us using the contact
                 form available on this Site.</p>
         </Modal >
-    )
+    ) :
+
+        (<Modal>
+            <h1>Termes et conditions</h1>
+            <h2>Conditions d'utilisation</h2>
+            <p>Ce contrat est un accord légal entre l'utilisateur de ce Site et Elco concernant le site Web www.elco.ca (Site).</p>
+
+            <p><b>MERCI DE LIRE ATTENTIVEMENT AVANT TOUTE NAVIGATION</b></p>
+
+            <p>En naviguant sur le Site, vous acceptez d'être lié par les termes et conditions de ce contrat, et ce,
+                tant que vous êtes sur le Site ou lié par le Site après avoir effectué un achat.</p>
+
+            <p><b>SI VOUS NE VOULEZ PAS ÊTRE LIÉ PAR CET ACCORD, NE NAVIGUEZ PAS SUR CE SITE.</b>
+                Les modalités et termes du contrat peuvent changer à tout moment et entrent en vigueur automatiquement.
+                Par conséquent, veuillez vérifier régulièrement si elles ont été modifiées. Aucun avertissement ne sera émis suite à la modification des termes du contrat.
+                Nous considérons que vous acceptez une modification des conditions d'utilisation si vous continuez à utiliser le Site après publication de toute modification.</p>
+
+            <p><b>DROITS DE PROPRIÉTÉ</b></p>
+            <p>Vous reconnaissez et acceptez que l'ensemble du contenu et des fonctionnalités disponibles sur ce Site - en particulier, mais sans s'y limiter, les textes, programmes et logiciels, bases de données,
+                photos, films, sons, musique, présentation et logos - sont protégés par des droits d'auteur, une base de données de protection des droits, des marques déposées, des marques de service, des brevets, des secrets commerciaux
+                ou d'autres lois sur les droits et la propriété. Le contenu et les éléments disponibles sont soit exclusivement détenus et contrôlés par April, soit utilisés sous licence.
+                Ces conditions s'appliquent à tous les contenus et tous les éléments disponibles sur le Site.</p>
+
+            <p><b>AUCUNE UTILISATION ILLÉGALE OU INTERDITE</b></p>
+            <p>Comme condition de votre utilisation du Site, vous garantissez à ELCO que vous n'utiliserez pas le Site à des fins illégales ou interdites par les présentes conditions,
+                conditions et avis. Vous ne pouvez pas utiliser le site d'une manière qui pourrait endommager, désactiver, surcharger ou détériorer le site ou interférer avec l'utilisation et
+                jouissance du Site. Vous ne pouvez pas obtenir ou tenter d'obtenir des documents ou des informations par des moyens non
+                intentionnellement mis à disposition ou fourni via le Site.</p>
+
+            <p><b>UTILISATION DE CE SITE</b></p>
+            <p>Le Site peut contenir des services de tableau d'affichage, des zones de discussion, des groupes de discussion, des forums, des communautés, des pages Web personnelles, des calendriers et/ou d'autres messages ou communications
+                installations conçues pour vous permettre de communiquer avec le grand public ou avec un groupe (collectivement, les « services de communication »), vous acceptez d'utiliser
+                les Services de communication uniquement pour publier, envoyer et recevoir des messages et du matériel qui sont appropriés et liés au Service de communication particulier. À titre d'exemple,
+                et non à titre limitatif, vous acceptez qu'en utilisant un Service de communication, vous ne :</p>
+
+            <p><ul>
+                <li> Diffamer, abuser, harceler, traquer, menacer ou autrement violer les droits légaux (tels que les droits à la vie privée et à la publicité) d'autrui.</li>
+                <li>Publier, publier, télécharger, distribuer ou diffuser tout sujet, nom, matériel ou information inapproprié, profane, diffamatoire, contrefait, obscène, indécent ou illégal.</li>
+                <li>Téléchargez des fichiers contenant des logiciels ou d'autres éléments protégés par les lois sur la propriété intellectuelle (ou par des droits de confidentialité ou de publicité), sauf si vous possédez ou contrôlez les droits y afférents ou si vous avez reçu tous les consentements nécessaires.</li>
+                <li>Téléchargez des fichiers contenant des virus, des fichiers corrompus ou tout autre logiciel ou programme similaire susceptible d'endommager le fonctionnement de l'ordinateur d'un tiers.</li>
+                <li>Faire de la publicité ou proposer de vendre ou d'acheter des biens ou des services à des fins commerciales, à moins que ce service de communication n'autorise spécifiquement de tels messages.</li>
+                <li>Réaliser ou transmettre des enquêtes, des concours, des systèmes pyramidaux ou des chaînes de lettres</li>
+                <li>Téléchargez tout fichier publié par un autre utilisateur d'un service de communication dont vous savez, ou devriez raisonnablement savoir, qu'il ne peut pas être légalement distribué de cette manière.</li>
+                <li>Falsifier ou supprimer les attributions d'auteur, les avis légaux ou autres avis appropriés ou les désignations ou étiquettes de propriété de l'origine ou de la source du logiciel ou de tout autre matériel contenu dans un fichier qui est téléchargé.</li>
+                <li>Restreindre ou empêcher tout autre utilisateur d'utiliser et de profiter des Services de communication.</li>
+                <li>Violer tout code de conduite ou autres directives pouvant s'appliquer à un service de communication particulier.</li>
+                <li>Récolter ou collecter d'une autre manière des informations sur d'autres personnes, y compris des adresses e-mail, sans leur consentement.</li>
+                <li>Violer les lois ou réglementations applicables.</li>
+            </ul></p>
+
+            <p>ELCO n'a aucune obligation de surveiller les services de communication. Toutefois, ELCO se réserve le droit d'examiner les documents publiés sur un service de communication et de supprimer
+                tout matériel à sa seule discrétion. ELCO se réserve le droit de résilier votre accès à tout ou partie des Services de Communication à tout moment et sans préavis pour
+                raison que ce soit.</p>
+
+            <p>ELCO se réserve le droit, à tout moment, de divulguer toute information nécessaire pour satisfaire à toute loi, réglementation, procédure judiciaire ou demande gouvernementale applicable,
+                ou de modifier, de refuser de publier ou de supprimer toute information ou matériel, en tout ou en partie, à la seule discrétion d'Elco.</p>
+
+            <p>Soyez toujours prudent lorsque vous fournissez des informations d'identification personnelle sur vous-même ou vos enfants dans tout service de communication. April ne contrôle pas
+                ou approuver le contenu, les messages ou les informations trouvés dans tout service de communication et, par conséquent, April décline spécifiquement toute responsabilité en ce qui concerne
+                les Services de communication et toute action résultant de votre participation à tout Service de communication. Les gestionnaires et les hôtes ne sont pas des porte-parole autorisés d'April,
+                et leurs opinions ne reflètent pas nécessairement celles d'ELCO.</p>
+
+            <p>Les éléments téléchargés sur un service de communication peuvent être soumis à des limitations d'utilisation, de reproduction et/ou de diffusion. Vous êtes responsable
+                pour adhérer à ces limitations si vous téléchargez les documents.</p>
+
+            <p><b>MATÉRIAUX FOURNIS À ELCO OU PUBLIÉS SUR TOUT SITE WEB D'APRIL</b></p>
+            <p>ELCO ne revendique pas la propriété des documents que vous fournissez à ELCO (y compris les commentaires et suggestions) ou que vous publiez, téléchargez, saisissez ou soumettez à un site ou à ses sites associés.
+                services (collectivement « Soumissions »). Cependant, en publiant, téléchargeant, saisissant, fournissant ou soumettant votre Soumission, vous accordez à eLCO, son affilié
+                les entreprises et les sous-licenciés nécessaires l'autorisation d'utiliser votre soumission dans le cadre de l'exploitation de leurs activités Internet, y compris,
+                sans limitation, les droits de : copier, distribuer, transmettre, afficher publiquement, exécuter publiquement, reproduire, éditer, traduire et reformater votre Soumission ; et
+                de publier votre nom en lien avec votre Soumission.</p>
+
+            <p>Aucune compensation ne sera versée pour l'utilisation de votre Soumission, comme prévu dans les présentes. ELCO n'a aucune obligation de publier ou d'utiliser toute Soumission
+                vous pouvez fournir et supprimer toute Soumission à tout moment à la seule discrétion d'Elco.</p>
+
+            <p>En publiant, téléchargeant, saisissant, fournissant ou soumettant votre soumission, vous garantissez et déclarez que vous possédez ou contrôlez autrement tous les droits sur votre
+                Soumission telle que décrite dans cette section, y compris, sans s'y limiter, tous les droits nécessaires pour fournir, publier, télécharger, saisir ou soumettre les Soumissions.</p>
+
+            <p><b>AVIS DE NON-RESPONSABILITÉ</b></p>
+
+            <p><b>LES INFORMATIONS, LOGICIELS, PRODUITS ET SERVICES INCLUS DANS OU DISPONIBLES SUR LE SITE PEUVENT COMPORTER DES INEXACTITUDES OU DES ERREURS TYPOGRAPHIQUES. DES CHANGEMENTS SONT PÉRIODIQUEMENT
+                AJOUTÉ AUX INFORMATIONS CI-DESSOUS. ELCO ET/OU SES FOURNISSEURS PEUVENT APPORTER DES AMÉLIORATIONS ET/OU DES MODIFICATIONS AU SITE À TOUT MOMENT. LES CONSEILS REÇUS VIA LE SITE DOIVENT
+                NE PAS ÊTRE COMPTÉ POUR DES DÉCISIONS PERSONNELLES, MÉDICALES, JURIDIQUES OU FINANCIÈRES ET VOUS DEVEZ CONSULTER UN PROFESSIONNEL APPROPRIÉ POUR DES CONSEILS SPÉCIFIQUES SUR MESURE
+                À VOTRE SITUATION.</b></p>
+
+            <p><b>ELCO ET/OU SES FOURNISSEURS NE FONT AUCUNE DÉCLARATION QUANT À L'ADÉQUATION, LA FIABILITÉ, LA DISPONIBILITÉ, L'OPPORTUNITÉ ET L'EXACTITUDE DES INFORMATIONS, DU LOGICIEL,
+                PRODUITS, SERVICES ET GRAPHIQUES ASSOCIÉS CONTENUS SUR LE STIE À TOUTE FIN. DANS LA MESURE MAXIMALE AUTORISÉE PAR LA LOI APPLICABLE, TOUTES CES INFORMATIONS, LOGICIELS,
+                LES PRODUITS, SERVICES ET GRAPHIQUES ASSOCIÉS SONT FOURNIS "TELS QUELS" SANS GARANTIE OU CONDITION D'AUCUNE SORTE. ELCO ET/OU SES FOURNISSEURS DÉCLINENT PAR LA PRÉSENTE TOUT
+                GARANTIES ET CONDITIONS CONCERNANT CES INFORMATIONS, LOGICIELS, PRODUITS, SERVICES ET GRAPHIQUES ASSOCIÉS, Y COMPRIS TOUTES LES GARANTIES OU CONDITIONS IMPLICITES
+                DE QUALITÉ MARCHANDE, D'ADÉQUATION À UN USAGE PARTICULIER, DE TITRE ET DE NON - CONTREFAÇON.</b></p>
+
+            <p><b> DANS LA MESURE MAXIMALE AUTORISÉE PAR LA LOI APPLICABLE, EN AUCUN CAS ELCO ET/OU SES FOURNISSEURS NE SERONT RESPONSABLES DE TOUT DOMMAGE DIRECT, INDIRECT, PUNITIF, ACCESSOIRE
+                DOMMAGES SPÉCIAUX, CONSÉCUTIFS OU TOUT DOMMAGE QUEL QU'IL SOIT, Y COMPRIS, SANS S'Y LIMITER, LES DOMMAGES POUR PERTE D'UTILISATION, DE DONNÉES OU DE PROFITS, DÉCOULANT DE OU DANS TOUTE
+                MANIÈRE LIÉE À L'UTILISATION OU À LA PERFORMANCE DU SITE, AVEC LE RETARD OU L'IMPOSSIBILITÉ D'UTILISER LE SITE OU LES SERVICES ASSOCIÉS, LA FOURNITURE OU L'ÉCHEC
+                FOURNIR DES SERVICES, OU POUR TOUTE INFORMATION, LOGICIEL, PRODUITS, SERVICES ET GRAPHIQUES ASSOCIÉS OBTENUS VIA LE SITE, OU AUTREMENT DÉCOULANT DE LA
+                UTILISATION DU SITE, QU'ELLE SOIT BASÉE SUR UN CONTRAT, UN DÉLIT, UNE NÉGLIGENCE, UNE RESPONSABILITÉ STRICTE OU AUTRE, MÊME SI ELCO OU L'UN DE SES FOURNISSEURS A ÉTÉ AVISÉ
+                LA POSSIBILITÉ DE DOMMAGES. PARCE QUE CERTAINES PROVINCES / ÉTATS / JURIDICTIONS NE PERMETTENT PAS L'EXCLUSION OU LA LIMITATION DE RESPONSABILITÉ POUR LES DOMMAGES CONSÉCUTIFS OU
+                DOMMAGES ACCESSOIRES, LA LIMITATION CI-DESSUS PEUT NE PAS S'APPLIQUER À VOUS. SI VOUS N'ÊTES PAS SATISFAIT D'UNE PARTIE DU SITE OU DE L'UNE DE CES CONDITIONS D'UTILISATION,
+                VOTRE SEUL ET UNIQUE RECOURS EST DE CESSER D'UTILISER LE SITE.</b></p>
+
+            <p><b>LIENS VERS DES SITES TIERS</b></p>
+            <p>Le Site peut contenir des liens vers d'autres sites Web ("Sites liés"). Les Sites liés ne sont pas sous le contrôle d'ELCO et d'ELCO
+                n'est pas responsable du contenu de tout site lié, y compris, sans s'y limiter, tout lien contenu dans un site lié,
+                ou toute modification ou mise à jour d'un site lié. ELCO n'est pas responsable de la diffusion sur le Web ou de toute autre forme de transmission reçue
+                à partir de n'importe quel site lié. ELCO vous fournit ces liens uniquement pour votre commodité, et l'inclusion de tout lien ne signifie pas
+                impliquent l'approbation par ELCO du site lié ou de toute association avec ses opérateurs.</p>
+
+            <p><b>RÉSILIATION / RESTRICTION D'ACCÈS</b></p>
+            <p>ELCO se réserve le droit, à sa seule discrétion, de résilier votre accès au Site et aux services connexes ou à toute partie de ceux-ci à tout moment, sans préavis.
+                Dans la mesure maximale permise par la loi, cet accord est régi par les lois de la province de Québec et vous consentez par la présente à la juridiction et au lieu exclusifs
+                des tribunaux de Longueuil, Québec, dans tous les litiges découlant de ou liés à l'utilisation du Site. L'utilisation du site n'est pas autorisée dans toute juridiction qui ne donne pas
+                effet à toutes les dispositions de ces termes et conditions, y compris, sans s'y limiter, ce paragraphe. Vous convenez qu'aucune coentreprise, partenariat, emploi ou
+                relation d'agence existe entre vous et ELCO à la suite de cet accord ou de l'utilisation du Site. L'exécution par ELCO de cet accord est soumise aux lois en vigueur
+                et la procédure judiciaire, et rien dans le présent accord ne déroge au droit d'ELCO de se conformer aux demandes gouvernementales, judiciaires et d'application de la loi ou
+                les exigences relatives à votre utilisation du Site ou les informations fournies ou recueillies par ELCO concernant cette utilisation. Si une partie de cet accord est déterminée
+                être invalide ou inapplicable conformément à la loi applicable, y compris, mais sans s'y limiter, les exclusions de garantie et les limitations de responsabilité énoncées ci-dessus,
+                alors la disposition invalide ou inapplicable sera réputée remplacée par une disposition valide et exécutoire qui correspond le mieux à l'intention de l'original
+                disposition et le reste de l'accord reste en vigueur. Sauf indication contraire dans les présentes, cet accord constitue l'intégralité de l'accord
+                entre l'utilisateur et ELCO en ce qui concerne le Site et il annule et remplace toutes les communications et propositions antérieures ou contemporaines, qu'elles soient électroniques, orales
+                ou écrit, entre l'utilisateur et ELCO concernant le Site. Une version imprimée de cet accord et de tout avis donné sous forme électronique devra
+                être recevable dans les procédures judiciaires ou administratives fondées sur ou liées au présent accord dans la même mesure et sous les mêmes conditions
+                que d'autres documents commerciaux et enregistrements générés et conservés à l'origine sous forme imprimée. C'est la volonté expresse des parties que cet accord
+                et tous les documents y afférents soient rédigés en anglais</p>
+
+            <p><b>Politique de confidentialité</b></p>
+            <p>ELCO adhère à des principes très stricts en matière de protection de la vie privée.</p>
+
+            <p><b>Voici un aperçu de notre politique.</b></p>
+
+            <p>Informations que nous collectons</p>
+            <p>ELCO collecte deux types d'informations relatives aux visiteurs du Site. Le premier type est constitué de données personnelles, telles que votre nom, vos adresses, votre numéro de téléphone, votre adresse e-mail, etc.,
+                qui est communiqué volontairement. La plupart de ces informations sont collectées lorsque vous achetez un produit ou un service auprès d'ELCO ou lorsque vous nous contactez par e-mail
+                ou en soumettant un formulaire sur notre Site. Nous pouvons conserver votre nom, votre adresse e-mail et / ou toute autre information personnelle que vous soumettez volontairement à ELCO afin de
+                vous identifier pour de futures communications et personnaliser le service que nous offrons.</p>
+
+            <p>Le deuxième type d'informations que nous collectons sont des informations générales, telles que le nombre de visiteurs sur nos sites, les pages visitées, etc.</p>
+
+            <p>En général, nous n'avons pas besoin de vos informations personnelles avant votre visite sur notre Site. Cependant, vous ne pouvez pas avoir accès à certaines pages du site sans divulguer votre
+                identité.</p>
+
+            <p>Pourquoi collectons-nous ces informations ?</p>
+            <p>ELCO collecte des informations personnelles afin d'identifier les visiteurs intéressés par l'achat de ses produits et services. Les informations sont également collectées pour nous permettre
+                pour personnaliser votre accès à notre Site. Grâce à lui, nous sommes en mesure de personnaliser le contenu de notre Site pour améliorer votre expérience et assurer votre satisfaction.</p>
+
+            <p>ELCO n'a pas l'intention d'utiliser les informations que vous avez soumises pour vous contacter sans autorisation préalable. Vous pouvez modifier vos préférences à tout moment en
+                en nous contactant via le formulaire de contact disponible sur ce Site.</p>
+
+            <p><b>Cookies</b></p>
+            <p>ELCO peut placer des cookies sur votre disque dur afin d'obtenir des données non personnelles. Les cookies sont des fichiers que votre navigateur place sur votre disque dur lorsque vous visitez
+                un site. Les navigateurs peuvent être configurés pour accepter automatiquement les cookies, mais vous pouvez également les configurer pour demander votre approbation avant de placer un cookie.</p>
+
+            <p>Ces cookies nous permettent de personnaliser vos visites et de vous reconnaître à chaque fois que vous revenez sur notre Site.</p>
+
+            <p><a href='https://policies.google.com/privacy?hl=fr' target='_blank' rel="noopener noreferrer">Pour avoir plus d'informations sur la politique de confidentialité de Google Analytics.</a></p>
+            <p><a href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel="noopener noreferrer">Pour vous désinscrire de Google Analytics.</a></p>
+
+            <p><b>Transmission de données à des tiers</b></p>
+            <p>ELCO s'engage à ne pas divulguer ni vendre les données qu'elle a collectées à des tiers sans votre autorisation préalable, sauf si la loi l'exige.</p>
+
+            <p><b>DATA_SECURTITY</b></p>
+            <p>ELCO stockera toutes les données qu'elle collecte dans un endroit sûr et sécurisé. De plus, nous prendrons toutes les précautions nécessaires pour protéger vos données contre la perte, la fraude
+                ou une utilisation indésirable.</p>
+
+            <p>Le site ELCO contient des liens vers d'autres sites Web. April n'est pas responsable des pratiques de ces sites Web en matière de protection de la vie privée.</p>
+            <p>ELCO stockera toutes les données collectées dans un endroit sûr et sécurisé. De plus, nous prendrons toutes les précautions nécessaires pour protéger vos données contre la perte, la fraude ou
+                utilisation indésirable.</p>
+
+            <p><b>AVIS DE COPYRIGHT ET DE MARQUE COMMERCIALE</b></p>
+            <p>ELCO Tous droits réservés.</p>
+
+            <p><b>MARQUES COMMERCIALES</b></p>
+            <p>Les noms et logos des sociétés et produits réels mentionnés dans le présent document peuvent être des marques commerciales de leurs propriétaires respectifs.</p>
+
+            <p>Les exemples d'entreprises, d'organisations, de produits, de personnes et d'événements décrits ici sont fictifs. Aucune association avec une entreprise, une organisation, un produit, une personne,
+                ou l'événement est intentionnel ou doit être déduit.</p>
+
+            <p>Tous les droits non expressément accordés dans les présentes sont réservés.</p>
+
+            <p><b>CONTACT</b></p>
+            <p>Pour plus d'informations sur les questions juridiques contenues dans ces conditions d'utilisation, ou pour toute question ou problème concernant ce service, veuillez nous écrire en utilisant le contact
+                formulaire disponible sur ce Site.</p>
+        </Modal>)
 })
 
 export default TermsConditions
