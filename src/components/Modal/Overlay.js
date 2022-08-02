@@ -5,6 +5,8 @@ const Overlay = styled.div`
     z-index: 1000 !important; /* Sit on top */
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgb(0,0,0); /* Fallback color */
