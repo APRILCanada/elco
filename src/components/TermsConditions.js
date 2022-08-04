@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from './Modal'
+import styled from 'styled-components'
 import { useI18next } from 'gatsby-plugin-react-i18next'
 
 const TermsConditions = (() => {
@@ -156,8 +157,8 @@ const TermsConditions = (() => {
 
             <p>These cookies allow us to personalize your visits and recognize you every time you return to our Site.</p>
 
-            <p><a href='https://policies.google.com/privacy?hl=en-US' target='_blank' rel="noopener noreferrer">To have more information on Google Analytics privacy policy.</a></p>
-            <p><a href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel="noopener noreferrer">To Opt - out from Google Analytics.</a></p>
+            <p><Link href='https://policies.google.com/privacy?hl=en-US' target='_blank' rel="noopener noreferrer">To have more information on Google Analytics privacy policy.</Link></p>
+            <p><Link href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel="noopener noreferrer">To Opt - out from Google Analytics.</Link></p>
 
             <p><b>Data transmission to third parties</b></p>
             <p>ELCO will not reveal or sell the data it has collected to third parties without your prior authorization, except where required by the law.</p>
@@ -338,8 +339,8 @@ const TermsConditions = (() => {
 
             <p>Ces cookies nous permettent de personnaliser vos visites et de vous reconnaître à chaque fois que vous revenez sur notre Site.</p>
 
-            <p><a href='https://policies.google.com/privacy?hl=fr' target='_blank' rel="noopener noreferrer">Pour avoir plus d'informations sur la politique de confidentialité de Google Analytics.</a></p>
-            <p><a href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel="noopener noreferrer">Pour vous désinscrire de Google Analytics.</a></p>
+            <p><Link href='https://policies.google.com/privacy?hl=fr' target='_blank' rel="noopener noreferrer">Pour avoir plus d'informations sur la politique de confidentialité de Google Analytics.</Link></p>
+            <p><Link href='https://tools.google.com/dlpage/gaoptout' target='_blank' rel="noopener noreferrer">Pour vous désinscrire de Google Analytics.</Link></p>
 
             <p><b>Transmission de données à des tiers</b></p>
             <p>ELCO s'engage à ne pas divulguer ni vendre les données qu'elle a collectées à des tiers sans votre autorisation préalable, sauf si la loi l'exige.</p>
@@ -370,3 +371,8 @@ const TermsConditions = (() => {
 })
 
 export default TermsConditions
+
+// css
+const Link = styled.a`
+ color: var(--color-heading);
+`
