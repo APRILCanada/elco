@@ -145,13 +145,18 @@ img {
 .shape-to-right {
   border-radius: 50% 50% 0 50%;
   object-position: 50% 50%;
-
 }
 
 .shape-to-left {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+
+// fix border radius safari: https://stackoverflow.com/questions/66835241/gatsby-image-plugin-not-displaying-properly-on-ios-devices
+.gatsby-image-wrapper {
+   position: relative;
+   z-index: 0; 
 }
 
 .highlight {
