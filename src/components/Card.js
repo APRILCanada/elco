@@ -12,7 +12,7 @@ const Card = ({ title, img, desc, direction = "left" }) => {
   return (
     <article>
       <Shape direction={direction}>
-        <GatsbyImage image={image} alt={title[lang]} />
+        <GatsbyImage image={image} alt={title[lang]} imgStyle={direction === 'left' ? { borderRadius: '50% 50% 50% 0'} : { borderRadius: '50% 50% 0 50%'} } />
       </Shape>
       <Name direction={direction}>{title[lang]}</Name>
       <Description direction={direction}>{desc && desc[lang]}</Description>
