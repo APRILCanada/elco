@@ -143,9 +143,7 @@ img {
 }
 
 .shape-to-right {
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-radius: 50% 50% 0 50%;
   object-position: 50% 50%;
 
 }
