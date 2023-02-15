@@ -9,10 +9,16 @@ const Card = ({ title, img, desc, direction = "left" }) => {
   const image = getImage(img);
   const { language: lang } = useI18next()
 
+  const directionTable = {
+    "left": { borderRadius: '50% 50% 50% 0' },
+    "right": { borderRadius: '50% 50% 0 50%' },
+    "none" : {}
+  } 
+
   return (
     <article>
       <Shape direction={direction}>
-        <GatsbyImage image={image} alt={title[lang]} imgStyle={direction === 'left' ? { borderRadius: '50% 50% 50% 0'} : { borderRadius: '50% 50% 0 50%'} } />
+        <GatsbyImage image={image} alt={title[lang]} imgStyle={ directionTable[direction] } />
       </Shape>
       <Name direction={direction}>{title[lang]}</Name>
       <Description direction={direction}>{desc && desc[lang]}</Description>

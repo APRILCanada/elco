@@ -38,7 +38,7 @@ const Solutions = () => {
       </SectionHeading>
       <Grid>
         {solutions.map(({ node: solution }) => (
-          <Card key={solution.id} {...solution} />
+          <Card key={solution.id} {...solution} direction="none" />
         ))}
         <CtaQuestions>
           <AnchorLink to='/#contact' stripHash>

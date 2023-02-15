@@ -31,9 +31,15 @@ export default About;
 
 
 // CSS
+
+// Calculate the value of the scrollbar width to avoid horizontal scrolling
+const scrollbarWidth = window.innerWidth - document.body.clientWidth + 0.5;
+document.body.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
+
+
 const Section = styled.section`
-  /* make the section full-bleed despite the <main> width being 1380px */
-  width: 100vw;
+  /* make the section full-bleed despite the <main> width being 1380px, and without any horizontal scrolling */
+  width: calc(100vw - var(--scrollbarWidth));
   margin-left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-primary);
