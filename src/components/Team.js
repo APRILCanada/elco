@@ -52,7 +52,9 @@ export default Team
 // CSS
 
 // Calculate the value of the scrollbar width to avoid horizontal scrolling
-const scrollbarWidth = window.innerWidth - document.body.clientWidth + 0.5;
+const isBrowser = typeof window !== "undefined"
+// Calculate the value of the scrollbar width to avoid horizontal scrolling
+const scrollbarWidth = isBrowser ? window.innerWidth - document.body.clientWidth + 0.5 : '16.5px'
 document.body.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
 
 const Section = styled.section`
