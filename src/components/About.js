@@ -5,6 +5,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { Trans, useTranslation } from 'react-i18next';
 
 const About = () => {
+  if(isBrowser) document.body.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
+
   const { t } = useTranslation()
 
   return (
@@ -34,8 +36,6 @@ export default About;
 const isBrowser = typeof window !== "undefined"
 // Calculate the value of the scrollbar width to avoid horizontal scrolling
 const scrollbarWidth = isBrowser ? window.innerWidth - document.body.clientWidth + 0.5 : '16.5px'
-document.body.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
-
 
 const Section = styled.section`
   /* make the section full-bleed despite the <main> width being 1380px, and without any horizontal scrolling */

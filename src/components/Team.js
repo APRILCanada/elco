@@ -7,6 +7,7 @@ import { Trans } from 'react-i18next';
 import media from '../styles/breakpoints';
 
 const Team = () => {
+  if(isBrowser) document.body.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
   const {
     allTeamJson: { edges: team }
   } = useStaticQuery(graphql`
@@ -55,7 +56,7 @@ export default Team
 const isBrowser = typeof window !== "undefined"
 // Calculate the value of the scrollbar width to avoid horizontal scrolling
 const scrollbarWidth = isBrowser ? window.innerWidth - document.body.clientWidth + 0.5 : '16.5px'
-document.body.style.setProperty("--scrollbarWidth", `${scrollbarWidth}px`);
+
 
 const Section = styled.section`
 /* make the section full-bleed despite the <main> width being 1380px, and without any horizontal scrolling */
