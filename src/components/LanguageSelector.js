@@ -12,7 +12,7 @@ const LanguageSelector = () => {
         return (
           <SelectedItem key={lang} lang={language}>
             <SelectLink to={originalPath} language={lang}>
-              {lang === 'fr' ? 'EN' : 'FR'}
+              {lang === 'fr' ? 'FR' : 'EN'}
             </SelectLink>
           </SelectedItem>
         );
